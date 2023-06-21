@@ -1,0 +1,165 @@
+div#pesquisa{
+    position: absolute;
+    background: white;
+    right: 0;
+    height: 2.2rem;
+    border-radius: 100rem;
+    padding: 0.3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1rem;
+    cursor: pointer;
+  }
+  
+  input#pesquisa{
+    height: 0.8rem;
+    border: 0;
+    background: none;
+    outline: 0;
+    width: 0;
+    transition: 0.4s;
+  }
+  
+  div#pesquisa:hover>input{
+    width: 12rem;
+    margin-left: 0.5rem;
+  }
+  
+  div#pesquisa:hover>a{
+    background: red;
+  }
+  a#pesquisa{
+    margin: 0.2rem;
+    width: 1.25;
+    height:  1.25;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100rem;
+    transform: translate(-0.1rem, 0);
+  }
+  
+  img#lupa-branca{
+    display: none;
+    width: 0;
+  }
+  
+  div#pesquisa>a>img{
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+  
+  div#pesquisa:hover>a>img#lupa-vermelha{
+    display: none;
+  }
+  div#pesquisa:hover>a>img#lupa-branca{
+    display: block;
+  }
+  
+  img#home{
+    width: 12rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
+    
+  nav {
+    background: linear-gradient( #000000, #fffbfb00);
+    position:fixed;
+    display: flex;
+    width: 100%;
+    z-index: 4;
+    transition: 1s;
+  }
+
+  nav.scrolled {
+    background-color: black;
+    transition: 1s;
+    /*border-bottom: 2px solid red;*/
+  }
+
+  nav.scrolled > div > ul > li > ul {
+    background-color: rgb(0, 0, 0);
+  }
+
+  nav.scrolled ul li:has(ul){
+    background-color: rgb(88, 88, 88);
+    transition: 1s;
+  }
+    
+  nav > div {
+    margin-top: 1rem;
+    margin-left: 5rem;
+  }
+    
+  nav ul li {
+    padding: 10px;
+  }
+    
+  nav :is(ul,li) {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;   
+  }
+    
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+    border-radius: 5px;
+  }
+    
+  nav a:hover {
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-underline-position: under;
+  }
+    
+  nav ul li:has(ul)::after{
+    content: ">";
+    color: white;
+    padding: 3px;
+    font-size: larger;
+  }
+    
+  nav ul li:has(ul):hover::after{
+    content: "v";
+    transition: 1s;
+    color: red;
+    padding: 3px;
+    transition: 1s;
+  }
+    
+  nav ul li:has(ul) {
+    font-family:Arial, Helvetica, sans-serif;
+    transition: 1s;
+  }
+    
+  nav > div > ul > li > ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: linear-gradient( #0000009d,#0000009d);
+    opacity: 0;
+    visibility: hidden;
+    transition: .3s;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 5px;
+    margin-top: 0.7rem;
+  }
+    
+  nav > div > ul > li > ul > li {
+    display: block;
+    border-left: 2px solid red;
+  }
+    
+  nav > div > ul > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+  }
+    
+  nav > div > ul > li {
+    position: relative;
+  }

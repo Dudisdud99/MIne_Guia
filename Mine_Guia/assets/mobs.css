@@ -1,0 +1,50 @@
+@import "nav.css";
+@import "imgtrailer.css";
+
+  body{
+    margin: 0%;
+    background-color: #161616;
+  }
+  
+  div#conteudo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-left: 3rem;
+    margin-right: 3rem;
+    transform: translate(0, -15rem);
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    background: rgb(236, 241, 255);
+    border: 2px solid black;
+    position: absolute;
+    z-index: 3;
+  }
+  
+  img.drops{
+    width: 3rem;
+    transform: translate(0,1rem);
+  }
+  
+  div#conteudo>div>a{
+    margin: 1rem;
+  }
+  
+  div#conteudo>div>p{
+    margin: 1.5rem;
+  }
+  
+  div#conteudo>div.border-right{
+    border-right: 3px solid black;
+  }
+  div#conteudo>div.border-top{
+    border-top: 3px solid black;
+  }
+  
+  div#conteudo>div>img{
+    height: 20rem;
+  }
+  
+  div#conteudo>div>h1,
+  div#conteudo>div>h2{
+    margin-left: 1rem;
+  }
