@@ -4,7 +4,7 @@ p#trailer{
     background-color: #00000071;
   }
   
-  img#fundo{
+  img.fundo{
     width: 100%; 
   }
   
@@ -52,9 +52,9 @@ p#trailer{
     transform: scale(95%);
   } 
 
-  div#linear-gradient{
-    background: linear-gradient(#fffbfb00,#0f0f0f81 15%,#161616 );
-    height: 9rem;
+  div.linear-gradient{
+    background: linear-gradient( #fffbfb00, black, black, rgba(0, 0, 0, 0));
+    height: 19rem;
     width: 100%;
     transform: translate(0,-9.2rem);
     z-index: 1;

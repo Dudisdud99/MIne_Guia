@@ -1,58 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Página com Navegação</title>
-  
-  <style>
-    nav {
-      background-color: blue;
-      height: 50px;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      transition: background-color 0.5s;
-    }
-
-    nav.scrolled {
-      background-color: red;
-    }
-    
-    .content {
-      height: 2000px; /* Apenas para criar espaço para rolagem */
-      padding-top: 60px; /* Adiciona espaço para o nav fixo */
-    }
-  </style>
+    <title>Exemplo de Carregar HTML</title>
+    <script>
+        function carregarHTML() {
+            var iframe = document.getElementById("meuIframe");
+            iframe.src = "afogado.html";
+        }
+    </script>
 </head>
 <body>
-  
- 
-<nav>Navbar</nav>
-  
- 
-<div class="content"></div>
-
-  
-
- 
-
-
-<script>
-    var lastScrollTop = 0;
-    var nav = document.querySelector('nav');
-
-    window.addEventListener('scroll', function() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        // Rolagem para baixo
-        nav.classList.add('scrolled');
-      } else {
-        // Rolagem para cima
-        nav.classList.remove('scrolled');
-      }
-
-      lastScrollTop = scrollTop;
-    });
-  </script>
+    <h1>Exemplo de Carregar HTML</h1>
+    <button onclick="carregarHTML()">Carregar HTML</button>
+    <br>
+    <iframe id="meuIframe" width="800" height="600"></iframe>
 </body>
 </html>
+
+
+
+
+
+
+

@@ -1,3 +1,4 @@
+
 div#pesquisa{
     position: absolute;
     background: white;
@@ -72,10 +73,10 @@ div#pesquisa{
     transition: 1s;
   }
 
-  nav.scrolled {
-    background-color: black;
+  /*nav.scrolled {
+    background-color: rgb(225, 0, 255);
     transition: 1s;
-    /*border-bottom: 2px solid red;*/
+    border-bottom: 4px solid rgb(0, 0, 0);
   }
 
   nav.scrolled > div > ul > li > ul {
@@ -83,9 +84,11 @@ div#pesquisa{
   }
 
   nav.scrolled ul li:has(ul){
-    background-color: rgb(88, 88, 88);
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgb(0, 0, 0);
     transition: 1s;
-  }
+  }*/
     
   nav > div {
     margin-top: 1rem;
@@ -134,13 +137,16 @@ div#pesquisa{
   nav ul li:has(ul) {
     font-family:Arial, Helvetica, sans-serif;
     transition: 1s;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #0000008a;
   }
     
   nav > div > ul > li > ul {
     position: absolute;
     top: 100%;
     left: 0;
-    background: linear-gradient( #0000009d,#0000009d);
+    background-color: #0000008a;
     opacity: 0;
     visibility: hidden;
     transition: .3s;
