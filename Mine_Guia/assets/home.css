@@ -34,7 +34,7 @@ div#conteudo>div{
 }
 
 
-div#conteudo>div>div.criaturas{
+div.criaturas{
   margin: 0.3rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
@@ -42,18 +42,19 @@ div#conteudo>div>div.criaturas{
   padding: 1rem;
   background:rgb(236, 241, 255);
   border: 2px solid black;
+  box-shadow: 3px 3px 3px black;
 }
 
 div.name{
   text-align: center;
 }
 
-div#conteudo>div>div.criaturas>a>img{
+div.criaturas>a>img{
   height: 12rem;
   margin-bottom: 1rem;
 }
 
-div#conteudo>div>div.criaturas:hover{
+div.criaturas:hover{
   transform: scale(115%);
   background: linear-gradient(rgba(174, 0, 255, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
 }

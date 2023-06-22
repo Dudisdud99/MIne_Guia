@@ -1,16 +1,17 @@
 
 div#pesquisa{
-    position: absolute;
-    background: white;
-    right: 0;
-    height: 2.2rem;
-    border-radius: 100rem;
-    padding: 0.3;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 1rem;
-    cursor: pointer;
+  position: absolute;
+  background: white;
+  right: 0;
+  height: 2.2rem;
+  border-radius: 100rem;
+  padding: 0.3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+  cursor: pointer;
+  /*border: 2px solid black*/
   }
   
   input#pesquisa{
@@ -19,12 +20,19 @@ div#pesquisa{
     background: none;
     outline: 0;
     width: 0;
-    transition: 0.4s;
+    transition: 0.4s; 
   }
   
   div#pesquisa:hover>input{
     width: 12rem;
     margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: #00000075;
+    color: white;
+    height: 1.2rem;
+    border-radius: 5px;
+    box-shadow: 1.5px 1.5px 1.5px black;
+
   }
   
   div#pesquisa:hover>a{

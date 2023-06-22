@@ -20,6 +20,7 @@
   div#conteudo>p{
     margin-left: 1rem;
     color: white;
+    font-size: 2rem;
   }
   
   div#conteudo>div{
@@ -36,7 +37,7 @@
   }
   
   
-  div#conteudo>div>div.itens{
+  div.itens{
     margin: 0.3rem;
     margin-bottom: 1rem;
     margin-top: 1rem;
@@ -44,19 +45,20 @@
     padding: 1rem;
     background:rgb(236, 241, 255);
     border: 2px solid black;
+    box-shadow: 3px 3px 3px black;
   }
 
   div.name{
     text-align: center;
   }
 
-  div#conteudo>div>div.itens>a>img{
+  div.itens>a>img{
     height: 6rem;
     margin-bottom: 1rem;
     z-index: 2;
   }
 
-  div#conteudo>div>div.itens:hover{
+  div.itens:hover{
     transform: scale(115%);
     background: linear-gradient(rgba(174, 0, 255, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
   }

@@ -1,18 +1,24 @@
-div#conteudo>div::-webkit-scrollbar {
+  div.lista::-webkit-scrollbar {
     height: 14px;
   }
   
-  div#conteudo>div::-webkit-scrollbar-track {
+  div.lista::-webkit-scrollbar-track {
     background-color: white;
     border-radius: 10px;
   }
   
-  div#conteudo>div::-webkit-scrollbar-thumb {
+  div.lista::-webkit-scrollbar-thumb {
     background: red;
     border: 2px solid white;
     border-radius: 10px;
   }
+
+  div.lista-mini::-webkit-scrollbar {
+    height: 10px;
+  }
   
-  div#conteudo::-webkit-scrollbar-thumb:hover {
-    background: #b30000; 
+  div.lista-mini::-webkit-scrollbar-thumb {
+    background: red;
+    border: 1px solid white;
+    border-radius: 10px;
   }
