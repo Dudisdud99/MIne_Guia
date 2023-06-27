@@ -9,7 +9,7 @@ p#trailer{
   }
   
   div#trailer{
-    transform: translate(1rem,-32rem);
+    transform: translate(1rem,15rem);
     color: white;
     font-size: larger;
     font-family:Arial, Helvetica, sans-serif;

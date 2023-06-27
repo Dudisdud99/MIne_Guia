@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Exemplo de Carregar HTML</title>
-    <script>
-        function carregarHTML() {
-            var iframe = document.getElementById("meuIframe");
-            iframe.src = "afogado.html";
+    <title>Tela Responsiva</title>
+    <style>
+        .my-div {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            transition: width 0.5s, height 0.5s;
         }
-    </script>
+    </style>
 </head>
 <body>
-    <h1>Exemplo de Carregar HTML</h1>
-    <button onclick="carregarHTML()">Carregar HTML</button>
-    <br>
-    <iframe id="meuIframe" width="800" height="600"></iframe>
+    <div class="my-div"></div>
+
+    <script>
+        window.addEventListener('resize', function() {
+            var screenWidth = window.innerWidth;
+
+            var myDiv = document.querySelector('.my-div');
+            myDiv.style.width = screenWidth / 2 + 'px';
+            myDiv.style.height = screenWidth / 2 + 'px';
+        });
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-
