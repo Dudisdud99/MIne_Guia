@@ -11,6 +11,7 @@ div#pesquisa{
   align-items: center;
   margin-right: 1rem;
   cursor: pointer;
+  border-radius: 100rem;
   /*border: 2px solid black*/
   }
   
@@ -67,18 +68,19 @@ div#pesquisa{
   }
   
   img#home{
+    transform: rotate(-90deg) translate(0,-4rem);
     width: 12rem;
-    margin-left: 1rem;
-    margin-top: 1rem;
   }
     
   nav {
-    background: linear-gradient( #000000, #fffbfb00);
+    background-color: black;
     position:fixed;
     display: flex;
-    width: 100%;
-    z-index: 5;
+    height: 100%;
+    z-index: 6;
     transition: 1s;
+    width: 4rem;
+    align-items: center;
   }
 
   /*nav.scrolled {
@@ -97,14 +99,33 @@ div#pesquisa{
     background-color: rgb(0, 0, 0);
     transition: 1s;
   }*/
+
+  div.menu{
+    transform: translate(-11.5rem,-18rem);
+    padding: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  div.menu>img{
+    width: 1.5rem;
+  }
     
-  nav > div {
-    margin-top: 1rem;
-    margin-left: 1.5rem;
+  div.navs {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.733);
+    display: flex;
+    height: 4rem;
+    width: 100vw;
+    top: 0%;
+    margin-left: 4rem;
+    visibility: hidden;
   }
     
   nav ul li {
     padding: 10px;
+    opacity: 1;
+    
   }
     
   nav :is(ul,li) {
@@ -119,7 +140,6 @@ div#pesquisa{
     text-decoration: none;
     padding: 3px;
     border-radius: 5px;
-    transition: 0.3s;
   }
     
   nav a:hover {
@@ -140,14 +160,12 @@ div#pesquisa{
     
   nav ul li:has(ul) {
     font-family:Arial, Helvetica, sans-serif;
-    transition: 1s;
     border-top-left-radius: 10px;
     border-bottom-right-radius: 10px;
   }
     
   nav > div > ul > li > ul {
     position: absolute;
-    top: 100%;
     left: 0;
     /*background-color: #0000008a;*/
     opacity: 0;
@@ -164,7 +182,7 @@ div#pesquisa{
   }
     
   nav > div > ul > li:hover > ul {
-    opacity: 1;
+    opacity: 2;
     visibility: visible;
   }
     

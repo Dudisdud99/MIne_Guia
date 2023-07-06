@@ -1,16 +1,6 @@
-    var lastScrollTop = 0;
-    var nav = document.querySelector('nav');
+let bt = document.querySelector(button.home)
+let navs = document.querySelector(div.navs)
 
-    window.addEventListener('scroll', function() {
-      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-      if (scrollTop > lastScrollTop) {
-        // Rolagem para baixo
-        nav.classList.add('scrolled');
-      } else {
-        // Rolagem para cima
-        nav.classList.remove('scrolled');
-      }
-
-      lastScrollTop = scrollTop;
-    });
+bt.addEventListener('click', function() {
+  navs.style.visibility = 'visible';
+});
