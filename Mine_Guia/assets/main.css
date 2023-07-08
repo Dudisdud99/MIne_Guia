@@ -1,13 +1,15 @@
 @import "nav.css";
 @import "imgtrailer.css";
+@import "scrollbar.css";
 
 body{
   margin: 0%;
   background-color: #161616;
 }
 
+
 div#conteudo{
-  transform: translate(0, -12rem);
+  transform: translate(0, 33rem);
   font-size: larger;
   font-family:Arial, Helvetica, sans-serif;
   position: absolute;
@@ -18,9 +20,15 @@ div#conteudo{
 div#conteudo>p{
   margin-left: 1rem;
   color: white;
+  font-size: 2rem;
 }
 
-div#conteudo>div{
+div.tipo-monstros>h2,p{
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+div.lista{
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -33,6 +41,34 @@ div#conteudo>div{
   padding: 0.5rem;
 }
 
+div.lista-mini{
+  background-color: rgb(155, 159, 168) ; 
+  height: 14rem ;
+  border: 2px solid black;
+  margin-right: 1.5rem;
+}
+
+div.lista-mini>div.criaturas>a>img{
+  height: 7rem;
+  margin-bottom: 1rem;
+}
+
+div.lista-mini>div.criaturas{
+  height: 10rem;
+  margin-bottom: 1rem;
+}
+
+div.tipo-monstros{
+  background-color: rgb(236, 241, 255);
+  padding: 1rem;
+  margin-top: 6rem;
+  width: 100%;
+}
+
+div.tipo-monstros>p{
+  padding: 1rem;
+  background-color: rgb(155, 159, 168);
+}
 
 div.criaturas{
   margin: 0.3rem;
@@ -40,7 +76,7 @@ div.criaturas{
   margin-top: 1rem;
   height: 17rem;
   padding: 1rem;
-  background:rgb(236, 241, 255);
+  background: rgb(236, 241, 255);
   border: 2px solid black;
   box-shadow: 3px 3px 3px black;
 }
@@ -56,5 +92,6 @@ div.criaturas>a>img{
 
 div.criaturas:hover{
   transform: scale(115%);
-  background: linear-gradient(rgba(174, 0, 255, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
+  background: linear-gradient(rgba(255, 0, 0, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
 }
+
