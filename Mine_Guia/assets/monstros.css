@@ -23,7 +23,7 @@ div#conteudo>p{
   font-size: 2rem;
 }
 
-div.tipo-monstros>h2,p{
+div.tipo-monstros>h2{
   margin-left: 1rem;
   margin-right: 1rem;
 }
@@ -34,11 +34,12 @@ div.lista{
   overflow-y: hidden;
   white-space: nowrap;
   margin-left: 1rem;
-  margin-right: 0.25rem;
+  margin-right: 0.25rem; 
   margin-bottom: 3rem;
   height: 22rem;
   background: rgba(255, 255, 255, 0.288);
   padding: 0.5rem;
+  /*scroll-snap-type: x mandatory;*/
 }
 
 div.lista-mini{
@@ -68,6 +69,8 @@ div.tipo-monstros{
 div.tipo-monstros>p{
   padding: 1rem;
   background-color: rgb(155, 159, 168);
+  margin-left: 1rem;
+  margin-right: 1.5rem;
 }
 
 div.criaturas{
@@ -88,6 +91,8 @@ div.name{
 div.criaturas>a>img{
   height: 12rem;
   margin-bottom: 1rem;
+  
+  filter: drop-shadow( rgb(84, 90, 187) 7px 7px 2px);
 }
 
 div.criaturas:hover{

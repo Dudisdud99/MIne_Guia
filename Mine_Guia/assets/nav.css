@@ -166,8 +166,13 @@ div#pesquisa{
   nav > div > ul > li:hover > ul {
     opacity: 1;
     visibility: visible;
+    background-color: rgba(0, 0, 0, 0.514);
   }
     
   nav > div > ul > li {
     position: relative;
+  }
+
+  body{
+    overflow-x: hidden;
   }

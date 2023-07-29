@@ -56,6 +56,7 @@
     height: 6rem;
     margin-bottom: 1rem;
     z-index: 2;
+    filter: drop-shadow( rgb(84, 90, 187) 7px 7px 2px);
   }
 
   div.itens:hover{

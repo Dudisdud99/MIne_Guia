@@ -83,6 +83,7 @@ div.name{
 div.criaturas>a>img{
   height: 12rem;
   margin-bottom: 1rem;
+  filter: drop-shadow( rgb(84, 90, 187) 7px 7px 2px);
 }
 
 div.criaturas:hover{
