@@ -4,7 +4,7 @@
 
 body{
   margin: 0%;
-  background-color: #161616;
+  background-color: #000000;
 }
 
 
@@ -30,7 +30,7 @@ div.tipo-monstros>h2{
 
 div.lista{
   display: flex;
-  overflow-x: scroll;
+  overflow-x:scroll;
   overflow-y: hidden;
   white-space: nowrap;
   margin-left: 1rem;
@@ -39,7 +39,7 @@ div.lista{
   height: 22rem;
   background: rgba(255, 255, 255, 0.288);
   padding: 0.5rem;
-  /*scroll-snap-type: x mandatory;*/
+  
 }
 
 div.lista-mini{
@@ -100,3 +100,5 @@ div.criaturas:hover{
   background: linear-gradient(rgba(255, 0, 0, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
 }
 
+div.criaturas:hover>a>img{
+}

@@ -29,13 +29,15 @@ p#trailer{
   }
   button#trailer{
     border: inherit;
-    background-color: white;
     font-size: 1.2rem;
     display: flex;
     height: 3rem;
     border-radius: 5px;
     width: 10rem;
     text-align: center;
+    transition: 0.2s;
+    background: radial-gradient(farthest-corner at 10px 10px,blue,red);
+    color: white;
   }
   
   p#assistir{
@@ -46,10 +48,13 @@ p#trailer{
   }
   
   button#trailer:hover{
-    background-color: rgba(255, 255, 255, 0.700);
+    transform: scale(110%);
+    cursor: pointer;
+    transition: 0.2s;
   }
-  button#trailer:focus{
-    transform: scale(95%);
+  button#trailer:active{
+    transform: scale(100%);
+    transition: 0.2s;
   } 
 
   div.linear-gradient{

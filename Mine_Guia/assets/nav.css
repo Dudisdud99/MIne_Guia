@@ -4,14 +4,13 @@ div#pesquisa{
   background: white;
   right: 0;
   height: 2.2rem;
-  border-radius: 100rem;
+  border-radius: 10px;
   padding: 0.3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-right: 1rem;
   cursor: pointer;
-  /*border: 2px solid black*/
   }
   
   input#pesquisa{
@@ -45,7 +44,7 @@ div#pesquisa{
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 100rem;
+    border-radius: 10px;
     transform: translate(-0.1rem, 0);
   }
   
@@ -67,9 +66,13 @@ div#pesquisa{
   }
   
   img#home{
-    width: 12rem;
     margin-left: 1rem;
-    margin-top: 1rem;
+    width: 12rem;
+    margin-top: 0.3rem;
+    transition: 0.1s;
+  }
+  img#home:hover{
+    transform: scale(110%);
   }
     
   nav {
@@ -79,39 +82,27 @@ div#pesquisa{
     width: 100%;
     z-index: 5;
     transition: 1s;
+    gap: 1rem;
   }
 
-  /*nav.scrolled {
-    background-color: rgb(225, 0, 255);
-    transition: 1s;
-    border-bottom: 4px solid rgb(0, 0, 0);
-  }
-
-  nav.scrolled > div > ul > li > ul {
-    background-color: rgb(0, 0, 0);
-  }
-
-  nav.scrolled ul li:has(ul){
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: rgb(0, 0, 0);
-    transition: 1s;
-  }*/
-    
-  nav > div {
+  nav div{
     margin-top: 1rem;
-    margin-left: 1.5rem;
+    display: flex;
+    align-items:baseline;  
   }
     
-  nav ul li {
-    padding: 10px;
+  .abas>ul{
+    margin-top: 0.3rem;
+    display: flex;
+    justify-content: space-evenly;
+    width: 25rem;
   }
     
   nav :is(ul,li) {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: inline-block;   
+    display: inline-block;
   }
     
   nav a {
@@ -122,10 +113,14 @@ div#pesquisa{
     transition: 0.3s;
   }
     
-  nav a:hover {
-    font-size: 1.5rem;
+  nav div>ul>li:hover>a {
+    font-size: 1.7rem;
     color: red;
     transition: 0.3s;
+  }
+
+  nav ul li a:hover{
+    color: red;
   }
     
   nav ul li:has(ul)::after{
@@ -145,11 +140,10 @@ div#pesquisa{
     border-bottom-right-radius: 10px;
   }
     
-  nav > div > ul > li > ul {
+  nav div > ul > li > ul {
     position: absolute;
     top: 100%;
     left: 0;
-    /*background-color: #0000008a;*/
     opacity: 0;
     visibility: hidden;
     transition: .3s;
@@ -158,21 +152,62 @@ div#pesquisa{
     padding: 5px;
   }
     
-  nav > div > ul > li > ul > li {
+  nav div > ul > li > ul > li {
     display: block;
     border-left: 2px solid red;
+    padding: 0.3rem;
   }
     
-  nav > div > ul > li:hover > ul {
+  nav div > ul > li:hover > ul {
     opacity: 1;
     visibility: visible;
     background-color: rgba(0, 0, 0, 0.514);
   }
     
-  nav > div > ul > li {
+  nav div > ul > li {
     position: relative;
   }
 
   body{
     overflow-x: hidden;
+  }
+
+  #mostrarNav{
+    width: 0%;
+    height: 0%;
+    display: none;
+  }
+
+  .mostrarNav{
+    background-color: white;
+    width: 2.3rem;
+    height: 2.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  .mostrarNav:hover{
+    transform: scale(120%);
+    transition: 0.2s;
+  }
+  .mostrarNav:active{
+    transform: scale(100%);
+  }
+
+  .mostrarNav>img{
+    width: 1.3rem;
+    height: 1.3rem;
+    
+  }
+
+  .escondido{
+    display: none;
+  }
+
+  .selecionado{
+    background-color: red;
+    transition: 0.5s;
   }

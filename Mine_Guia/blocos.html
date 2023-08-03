@@ -5,15 +5,23 @@
     <title>Blocos - Mine_Guia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="assets\blocos.css">
-    <!--<script defer async src='assets/nav.js'></script>-->
+    <script defer async src='assets/nav.js'></script>
     <link rel="icon" href="img/Grass_Block.webp">
 </head>
 <body>
     <nav>
-        <a href="index.html">
-            <img id="home" src="img/palavramine2.png" alt="">
-        </a>
-        <div>
+        <div id="inico">
+            <a href="index.html">
+                <img id="home" src="img/palavramine2.png" alt="">
+            </a>
+        </div>
+        <div id="aparecer">
+            <input id="mostrarNav" type="checkbox"></input>
+            <label class="mostrarNav" for="mostrarNav">
+                <img src="img/3linhasVermelho.png" alt="">
+            </label>
+        </div>
+        <div class="abas">
             <ul id="primeira">
                 <li>
                     <a>Criaturas</a>
@@ -269,7 +277,7 @@
     <div id="trailer">
         <img id="trailer1" src="img/palavramine.png" alt="">
         <p id="trailer">Assita o trailer completo agora</p>
-        <button id="trailer" onclick="window.location.href = 'https://www.youtube.com/watch?v=YUxZX308RTE'"><img src="img/play.png" alt="" id="trailer2"><p id="assistir">Assistir</p></button>
+        <button id="trailer" onclick="window.location.href = 'https://www.youtube.com/watch?v=YUxZX308RTE'"><img src="img/playBranco.png" alt="" id="trailer2"><p id="assistir">Assistir</p></button>
     </div>
     <img class="fundo" src="img/blocos.webp" alt="">
     <div class="linear-gradient"></div>
