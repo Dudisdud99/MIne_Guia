@@ -1,0 +1,15 @@
+[
+    {
+        "monstro":"Afogado",
+        "img":"img/Afogado.webp"
+    },
+    {
+        "monstro":"Creeper",
+        "img":"img/Creeper.webp"
+    },
+    {
+        "monstro":"Zombie",
+        "img":"img/Zombie-PNG.png"
+    }
+
+]

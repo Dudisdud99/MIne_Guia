@@ -36,7 +36,7 @@ div.lista{
   margin-left: 1rem;
   margin-right: 0.25rem; 
   margin-bottom: 3rem;
-  height: 22rem;
+  height: 23rem;
   background: rgba(255, 255, 255, 0.288);
   padding: 0.5rem;
   
@@ -44,7 +44,7 @@ div.lista{
 
 div.lista-mini{
   background-color: rgb(155, 159, 168) ; 
-  height: 14rem ;
+  height: 15rem ;
   border: 2px solid black;
   margin-right: 1.5rem;
 }
@@ -74,14 +74,15 @@ div.tipo-monstros>p{
 }
 
 div.criaturas{
-  margin: 0.3rem;
+  margin: 0.4rem;
   margin-bottom: 1rem;
   margin-top: 1rem;
   height: 17rem;
   padding: 1rem;
-  background: rgb(236, 241, 255);
+  background: rgb(255, 255, 255);
   border: 2px solid black;
   box-shadow: 3px 3px 3px black;
+  transition: 0.1s;
 }
 
 div.name{
@@ -91,14 +92,17 @@ div.name{
 div.criaturas>a>img{
   height: 12rem;
   margin-bottom: 1rem;
-  
-  filter: drop-shadow( rgb(84, 90, 187) 7px 7px 2px);
+  filter: drop-shadow( rgba(55, 56, 129, 0.781) 7px 7px 2px);
 }
 
 div.criaturas:hover{
   transform: scale(115%);
-  background: linear-gradient(rgba(255, 0, 0, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
+  background: linear-gradient(rgb(0, 26, 255), red);
+  color: white;
+  transition: 0.1s;
+  
 }
 
 div.criaturas:hover>a>img{
+  filter: drop-shadow( rgb(107, 0, 0) 7px 7px 2px);
 }
