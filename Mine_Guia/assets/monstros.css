@@ -37,13 +37,13 @@ div.lista{
   margin-right: 0.25rem; 
   margin-bottom: 3rem;
   height: 23rem;
-  background: rgba(255, 255, 255, 0.288);
+  background: rgba(255, 255, 255, 0.151);
   padding: 0.5rem;
   
 }
 
 div.lista-mini{
-  background-color: rgb(155, 159, 168) ; 
+  background: rgba(0, 0, 0, 0.76);
   height: 15rem ;
   border: 2px solid black;
   margin-right: 1.5rem;
@@ -60,7 +60,7 @@ div.lista-mini>div.criaturas{
 }
 
 div.tipo-monstros{
-  background-color: rgb(236, 241, 255);
+  background-color: rgb(255, 255, 255);
   padding: 1rem;
   margin-top: 6rem;
   width: 100%;
@@ -79,10 +79,11 @@ div.criaturas{
   margin-top: 1rem;
   height: 17rem;
   padding: 1rem;
-  background: rgb(255, 255, 255);
+  background:  rgb(236, 241, 255);
   border: 2px solid black;
   box-shadow: 3px 3px 3px black;
-  transition: 0.1s;
+  color: rgb(0, 0, 0);
+  
 }
 
 div.name{
@@ -97,12 +98,74 @@ div.criaturas>a>img{
 
 div.criaturas:hover{
   transform: scale(115%);
-  background: linear-gradient(rgb(0, 26, 255), red);
-  color: white;
-  transition: 0.1s;
-  
+  background: linear-gradient( rgb(236, 241, 255), rgb(236, 241, 255), red);
 }
 
 div.criaturas:hover>a>img{
-  filter: drop-shadow( rgb(107, 0, 0) 7px 7px 2px);
+  /*filter: drop-shadow( rgb(107, 0, 0) 7px 7px 2px);*/
+}
+
+.infoCriaturas{
+  width: 80vw;
+  height: 80vh;
+}
+
+.iframes{
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.555);
+  width: 100%;
+  height: 100%;
+}
+
+.iframes>div>div{
+  width: 80vw;
+  height: 2rem;
+  background: transparent;
+  margin-top: 2rem;
+}
+
+.voltar{
+  background-color: white;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.voltar:hover{
+  transform: scale(120%);
+  transition: 0.2s;
+}
+
+.voltar>img{
+  width: 1.8rem;
+}
+
+.iframeEscondido{
+  display: none;
+}
+
+.mostrarInfo{
+  display: none;
+}
+
+.mostrarInfo+label{
+  margin-top: 0.5rem;
+  display: none;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+.mostrarInfo+label>img{
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.criaturas:hover label{
+  display: block;
 }

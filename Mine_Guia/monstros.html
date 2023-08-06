@@ -6,6 +6,7 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href="assets\monstros.css">
     <script defer async src='assets/nav.js'></script>
+    <script defer async src='assets/monstros.js'></script>
     <link rel="icon" href="img/Grass_Block.webp">
 </head>
 <body>
@@ -96,6 +97,41 @@
             </label>
         </div>
     </nav>
+    <!--iframes-->
+    <div class="iframes">
+        <div class="iframeAfogado">
+            <div >
+                <label for="mostrarInfoAfogado" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
+            </div>
+            <iframe src="afogado copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+        <div class="iframeZumbi">
+            <div >
+                <label for="mostrarInfoZumbi" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
+            </div>
+            <iframe src="zumbi copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+        <div class="iframeCreeper">
+            <div >
+                <label for="mostrarInfoCreeper" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
+            </div>
+            <iframe src="creeper copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+        <div class="iframeEsqueleto">
+            <div >
+                <label for="mostrarInfoEsqueleto" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
+            </div>
+            <iframe src="esqueleto copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+    </div>
     <!--conteudo-->
     <div id="conteudo">
         <p>Todos os monstros</p>
@@ -103,18 +139,34 @@
             <div class="criaturas">
                 <a href="afogado.html"><img src="img/Afogado.webp" alt=""></a>
                 <div class="name">Afogado</div>
+                <input type="checkbox" id="mostrarInfoAfogado" class="mostrarInfo">
+                <label for="mostrarInfoAfogado" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
             </div>
             <div class="criaturas">
                 <a href="zumbi.html"><img src="img/Zombie-PNG.png" alt=""></a>
                 <div class="name">Zumbi</div>
+                <input type="checkbox" id="mostrarInfoZumbi" class="mostrarInfo">
+                <label for="mostrarInfoZumbi" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
             </div>
             <div class="criaturas">
                 <a href="esqueleto.html"><img src="img/esqueleto.webp" alt=""></a>
                 <div for="" class="name">Esqueleto</div>
+                <input type="checkbox" id="mostrarInfoEsqueleto" class="mostrarInfo">
+                <label for="mostrarInfoEsqueleto" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
             </div>
             <div class="criaturas">
                 <a href="creeper.html"><img src="img/Creeper.webp" alt=""></a>
                 <div for="" class="name">Creeper</div>
+                <input type="checkbox" id="mostrarInfoCreeper" class="mostrarInfo">
+                <label for="mostrarInfoCreeper" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
             </div>
             <div class="criaturas">
                 <a href=""><img src="img/Phantom_BE1.webp" alt=""></a>
