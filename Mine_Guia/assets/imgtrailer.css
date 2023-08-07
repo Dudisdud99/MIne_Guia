@@ -33,19 +33,20 @@ button#trailer{
   font-size: 1.2rem;
   display: flex;
   height: 3rem;
-  border-radius: 5px;
-  width: 10rem;
+  border-radius: 10px;
+  width: 12rem;
   text-align: center;
   transition: 0.2s;
   background: radial-gradient(farthest-corner at 10px 10px,blue,red);
   color: white;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 p#assistir{
   height: 3rem;
   font-family:Arial, Helvetica, sans-serif;
-  width: 6rem;
-  transform: translate(0,-0.45rem);
+  transform: translate(0,-0.5rem);
 }
 
 button#trailer:hover{
@@ -65,4 +66,25 @@ div.linear-gradient{
   transform: translate(0,-9.2rem);
   z-index: 1;
   position: absolute;
+}
+
+div#trailer a{
+  background: radial-gradient(farthest-corner at 10px 10px,blue,red);
+  width: 6rem;
+  height: 3rem;
+  text-align: center;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+div#trailer a:hover{
+  transform: scale(110%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+div#trailer a p{
+  font-family:Arial, Helvetica, sans-serif;
+  transform: translate(0,-0.5rem);
+  color: white;
 }

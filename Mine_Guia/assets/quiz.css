@@ -1,0 +1,140 @@
+@import "nav.css";
+@import "imgtrailer.css";
+@import "scrollbar.css";
+
+body{
+    margin: 0%;
+    background-color: black;
+}
+
+.conteudo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.final{
+    opacity: 0;
+    /*visibility: hidden;*/
+    background-color: black;
+    width: 100%;
+}
+
+.quiz{
+    z-index: 5;
+    position: absolute;
+    transform: translate(0,10rem);
+    width: 85%;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4,1fr); 
+    grid-template-rows: repeat(3,1fr);
+    color: white;
+}
+
+.quiz div{
+    padding: 1rem; 
+}
+
+.questaoAtual{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.divPergunta{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    justify-content: center;
+}
+
+.alternativas{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.alternativas button{
+    background-color: white;
+    border-radius: 10px;
+    color: red;
+    font-size: x-large;
+    border: none;
+    transition: 0.2s;
+}
+.alternativas button:hover{
+    transform: scale(120%);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.alternativas button:active{
+    transform: scale(100%);
+    background-color: red;
+    color: white;
+    transition: 0.2s;
+}
+
+.totalErros{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    justify-content: center;
+}
+
+.totalAcertos{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{
+    background-color: rgba(0, 0, 0, 0.747);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.comecar{
+    z-index: 3;
+    position: absolute;
+    background-color: white;
+    color: red;
+    font-size: x-large;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    margin-top: 7rem;
+    transition: 0.2s;
+}
+.comecar:hover{
+    transform: scale(120%);
+    cursor: pointer;
+    transition: 0.2s;
+}
+.comecar:active{
+    transform: scale(100%);
+    background-color: red;
+    color: white;
+    transition: 0.2s;
+}
+
+.acertou{
+    background-color: green;
+    width: 100%;
+    height: 50rem;
+}
+
+.errou{
+    background-color: red;
+    width: 100%;
+    height: 50rem;
+}
+
+.mensagem{
+    display: none;
+}

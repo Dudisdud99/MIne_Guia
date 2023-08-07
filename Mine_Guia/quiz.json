@@ -1,0 +1,27 @@
+[
+    {
+      "pergunta": "Qual o unico mob de três cabeças?",
+      "alternativas": ["Esqueleto", "Snow golem", "Ender dragon", "Creeper", "Iron golem", "Piglim", "Wardem", "Whiter boss", "Enderman", "Afogado"],
+      "resposta": 7
+    },
+    {
+      "pergunta": "Número de perolas de enderman para abrir o portal do fim",
+      "alternativas": [10, 7, 13, 11, 8, 12, 6, 15, 9, 3],
+      "resposta": 8
+    },
+    {
+      "pergunta": "Quem é o criador do minecraft",
+      "alternativas": ["Nicolas", "Alan23", "Musk", "Notch", "Shamp", "Trevor", "Chopan", "Raptor1", "Heitor", "Vagner"],
+      "resposta": 3
+    },
+    {
+        "pergunta": "Um dos maiores youtuber de minecraft, morreu em 2022 para o câncer, usava coroa em sua skin",
+        "alternativas": ["Thecnoblade", "Dream", "Authentic", "Pactw", "Febatista", "Vinicius13", "Mike", "Cafeinado", "Conlow", "JVNQ"],
+        "resposta": 0
+    },
+    {
+        "pergunta": "Minecraft para computador",
+        "alternativas": ["Notch", "Node", "Carvalho", "Bedrock", "PocketEdition", "Java", "2k", "Portal", "dataPeck", "Unlocked"],
+        "resposta": 5
+    }
+  ]
