@@ -138,3 +138,7 @@ body{
 .mensagem{
     display: none;
 }
+
+.quiz div>h1{
+    margin-right: 0.5rem;
+}
