@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+
   const btMostrarAbas = document.getElementById('mostrarAbas')
   const abas = document.querySelector('.abas');
   const iconMostrarAbas = document.querySelector('.mostrarAbas>img')
@@ -59,8 +59,3 @@ document.addEventListener('DOMContentLoaded', function() {
       labelMostrarUsuario.style.background = 'white'
     }
   });
-
-  
-});
-
-
