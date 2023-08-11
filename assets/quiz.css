@@ -126,19 +126,43 @@ body{
 .acertou{
     background-color: green;
     width: 100%;
-    height: 50rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.acertou>h1{
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
 .errou{
     background-color: red;
     width: 100%;
-    height: 50rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.errou>h1{
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: 10px;
 }
 
-.mensagem{
+.escondido{
     display: none;
 }
 
 .quiz div>h1{
     margin-right: 0.5rem;
+}
+
+.final{
+    background-color: blue;
 }

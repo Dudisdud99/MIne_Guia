@@ -9,11 +9,42 @@ const totalErrosFinal = Quiz.querySelector(".errosFinal")
 const totalAcertosFinal = Quiz.querySelector(".acertosFinal")
 const errou = document.querySelector(".errou")
 const acertou = document.querySelector(".acertou")
+const conteudo = document.querySelector('.conteudo')
+const fundo = document.querySelector('.fundo')
+const final = document.querySelector('.final')
 let contErros = 0
 let contAcertos = 0
+var atraso = 1000
 
-errou.classList.add('mensagem')
-acertou.classList.add('mensagem')
+errou.classList.add('escondido')
+acertou.classList.add('escondido')
+final.classList.add('escondido')
+
+
+
+function mensagemAcertou(){
+  acertou.classList.remove('escondido')
+  conteudo.classList.add('escondido')
+  fundo.classList.add('escondido')
+
+  setTimeout(function() {
+    acertou.classList.add('escondido')
+    conteudo.classList.remove('escondido')
+    fundo.classList.remove('escondido')
+  }, atraso)
+}
+
+function mensagemErrou(){
+  errou.classList.remove('escondido')
+  conteudo.classList.add('escondido')
+  fundo.classList.add('escondido')
+
+  setTimeout(function() {
+    errou.classList.add('escondido')
+    conteudo.classList.remove('escondido')
+    fundo.classList.remove('escondido')
+  }, atraso)
+}
 
 function info(){
   let erros = Quiz.querySelector(".totalErros>h1")
@@ -31,6 +62,7 @@ function info(){
   elPergunta.classList.add('titulo')
 }
 
+
 async function main() {
   const request = await fetch("quiz.json")
   const quiz = await request.json()
@@ -41,9 +73,6 @@ async function main() {
 
   function carregarPergunta(nPergunta) {
     if (numeroDaPergunta > quiz.length){
-      final.style.visibility="visible"
-      final.style.opacity="1"
-
       return
     }
     elPergunta.innerHTML = quiz[nPergunta].pergunta
@@ -67,10 +96,10 @@ async function main() {
       carregarPergunta(++numeroDaPergunta)
       questaoAtual.textContent = numeroDaPergunta+1
       totalAcertos.textContent++
+      mensagemAcertou()
       return
     }
-
-    alert("EROooooOOOoOOooWWWWW");
+    mensagemErrou()
     totalErros.innerText++
   })
 
