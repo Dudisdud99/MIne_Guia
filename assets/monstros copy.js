@@ -7,19 +7,24 @@ const elementosInfo = [
     { checkbox: document.getElementById('mostrarInfoEsqueleto'), iframe: document.querySelector('.iframeEsqueleto') }
 ];
 
-divIframes.classList.add('iframeEscondido');
-elementosInfo.forEach(elemento => elemento.iframe.classList.add('iframeEscondido'));
+divIframes.classList.add('escondido');
+elementosInfo.forEach(elemento => elemento.iframe.classList.add('escondido'));
 
 elementosInfo.forEach(elemento => {
-    elemento.checkbox.addEventListener('change', function() {
+    
+    try {
+        elemento.checkbox.addEventListener('change', function() {
         if (elemento.checkbox.checked) {
-            divIframes.classList.remove('iframeEscondido');
-            elemento.iframe.classList.remove('iframeEscondido');
+            divIframes.classList.remove('escondido');
+            elemento.iframe.classList.remove('escondido');
         } else {
             if (elementosInfo.every(item => !item.checkbox.checked)) {
-                divIframes.classList.add('iframeEscondido');
+                divIframes.classList.add('escondido');
             }
-            elemento.iframe.classList.add('iframeEscondido');
+            elemento.iframe.classList.add('escondido');
         }
     });
+    } catch (error) {
+        console.log(error)
+    }
 });
