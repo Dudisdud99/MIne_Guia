@@ -13,46 +13,46 @@ const iframeCreeper = document.querySelector('.iframeCreeper')
 const mostrarEsqueleto = document.getElementById('mostrarInfoEsqueleto')
 const iframeEsqueleto = document.querySelector('.iframeEsqueleto')
 
-divIframes.classList.add('iframeEscondido');
+divIframes.classList.add('escondido');
 
-iframeAfogado.setAttribute('class','iframeEscondido');
-iframeZumbi.setAttribute('class','iframeEscondido');
-iframeCreeper.classList.add('iframeEscondido');
-iframeEsqueleto.classList.add('iframeEscondido');
+iframeAfogado.setAttribute('class','escondido');
+iframeZumbi.setAttribute('class','escondido');
+iframeCreeper.classList.add('escondido');
+iframeEsqueleto.classList.add('escondido');
 
 mostrarAfogado.addEventListener('change', function() {
     if (mostrarAfogado.checked) {
-        divIframes.classList.remove('iframeEscondido'); 
-        iframeAfogado.classList.remove('iframeEscondido');
+        divIframes.classList.remove('escondido'); 
+        iframeAfogado.classList.remove('escondido');
     } else {
-        divIframes.classList.add('iframeEscondido'); 
-        iframeAfogado.classList.add('iframeEscondido');
+        divIframes.classList.add('escondido'); 
+        iframeAfogado.classList.add('escondido');
     }
 });
 mostrarZumbi.addEventListener('change', function() {
     if (mostrarZumbi.checked) {
-        divIframes.classList.remove('iframeEscondido'); 
-        iframeZumbi.classList.remove('iframeEscondido');
+        divIframes.classList.remove('escondido'); 
+        iframeZumbi.classList.remove('escondido');
     } else {
-        divIframes.classList.add('iframeEscondido'); 
-        iframeZumbi.classList.add('iframeEscondido');
+        divIframes.classList.add('escondido'); 
+        iframeZumbi.classList.add('escondido');
     }
 });
 mostrarCreeper.addEventListener('change', function() {
     if (mostrarCreeper.checked) {
-        divIframes.classList.remove('iframeEscondido'); 
-        iframeCreeper.classList.remove('iframeEscondido');
+        divIframes.classList.remove('escondido'); 
+        iframeCreeper.classList.remove('escondido');
     } else {
-        divIframes.classList.add('iframeEscondido'); 
-        iframeCreeper.classList.add('iframeEscondido');
+        divIframes.classList.add('escondido'); 
+        iframeCreeper.classList.add('escondido');
     }
 });
 mostrarEsqueleto.addEventListener('change', function() {
     if (mostrarEsqueleto.checked) {
-        divIframes.classList.remove('iframeEscondido'); 
-        iframeEsqueleto.classList.remove('iframeEscondido');
+        divIframes.classList.remove('escondido'); 
+        iframeEsqueleto.classList.remove('escondido');
     } else {
-        divIframes.classList.add('iframeEscondido'); 
-        iframeEsqueleto.classList.add('iframeEscondido');
+        divIframes.classList.add('escondido'); 
+        iframeEsqueleto.classList.add('escondido');
     }
 });

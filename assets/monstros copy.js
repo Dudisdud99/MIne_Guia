@@ -8,23 +8,18 @@ const elementosInfo = [
 ];
 
 divIframes.classList.add('escondido');
-elementosInfo.forEach(elemento => elemento.iframe.classList.add('escondido'));
+elementosInfo.forEach(elemento => elemento.iframe.classList.add('escondido'))
 
 elementosInfo.forEach(elemento => {
-    
-    try {
-        elemento.checkbox.addEventListener('change', function() {
+    elemento.checkbox.addEventListener('change', () => {
         if (elemento.checkbox.checked) {
-            divIframes.classList.remove('escondido');
-            elemento.iframe.classList.remove('escondido');
+            divIframes.classList.remove('escondido')
+            elemento.iframe.classList.remove('escondido')
         } else {
             if (elementosInfo.every(item => !item.checkbox.checked)) {
-                divIframes.classList.add('escondido');
+                divIframes.classList.add('escondido')
             }
-            elemento.iframe.classList.add('escondido');
+            elemento.iframe.classList.add('escondido')
         }
-    });
-    } catch (error) {
-        console.log(error)
-    }
-});
+    })
+})

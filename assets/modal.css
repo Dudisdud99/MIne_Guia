@@ -1,0 +1,49 @@
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.459);
+    display: grid;
+    place-items: center;
+    transition: 1s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal.opened{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal .window{
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    border-radius: 1vw;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    position: relative;
+}
+
+.modal .window .close{
+    border: none;
+    position: absolute;
+    right: -1vw;
+    top: -1vw;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1vw;
+    width: 4vw;
+    height: 4vw;
+}
+
+.modal .window .content{
+    flex: 1;
+}
+
+.modal .window .actions{
+    display: flex;
+    justify-content: flex-end;
+}
