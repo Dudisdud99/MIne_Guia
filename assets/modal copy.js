@@ -1,6 +1,6 @@
 const modal = document.querySelector('.modal')
 const close = modal.querySelector('.close')
-const open = document.querySelector('.abrir')
+const open = document.getElementById('btId1')
 
 open.addEventListener('click', () => {
     modal.classList.add("opened")
