@@ -1,7 +1,7 @@
 const listaCriaturas = document.querySelector(".lista")
 const listaIframes = document.querySelector(".iframes")
 
-async function mostrarMonstros() {
+async function btIdChange() {
     const request = await fetch("monstros.json")
     const monstros = await request.json()
 
@@ -22,5 +22,5 @@ async function mostrarMonstros() {
     carregarCriaturas(0)
 }
 
-mostrarMonstros()
+btIdChange()
 
