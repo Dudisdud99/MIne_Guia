@@ -4,8 +4,7 @@
         "img":["img/Afogado.webp","img/Zombie-PNG.png","img/esqueleto.webp","img/Creeper.webp","img/Phantom_BE1.webp","img/Shulker.webp","img/Evoker.webp","img/Vex_JE4.webp","img/Zombie_Villager_Base.webp","img/Elder_Guardian.webp"],
         "html":["afogado.html","zumbi.html","esqueleto.html","creeper.html"],
         "inpId":["mostrarInfoAfogado","mostrarInfoZumbi","mostrarInfoEsqueleto","mostrarInfoCreeper"],
-        "iframe":["iframeAfogado","iframeZumbi","iframeCreeper","iframeEsqueleto"],
-        "htmlCopy":["afogado copy.html","zumbi copy.html","creeper copy.html","esqueleto copy.html"]
+        "info":["fsgfshgfshgfjshgfhsgjhsfghgfjshgjhfgshf"]
     }
 
 ]

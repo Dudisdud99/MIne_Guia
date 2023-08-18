@@ -1,26 +1,52 @@
-const listaCriaturas = document.querySelector(".lista")
-const listaIframes = document.querySelector(".iframes")
+const listaCriaturas = document.querySelector(".lista");
+const listaIframes = document.querySelector(".iframes");
+const modal = document.querySelector('.modal');
+const p = modal.querySelector('.info');
+const close = modal.querySelector('.close');
 
-async function btIdChange() {
-    const request = await fetch("monstros.json")
-    const monstros = await request.json()
+async function carregarBt() {
+    const request = await fetch("monstros.json");
+    const monstros = await request.json();
 
-    numeroDoMonstro = 0
+    tipoCriatura = 0;//monstro
 
-    function carregarCriaturas(numeroDoMonstro) {
-        listaCriaturas.innerHTML = monstros[numeroDoMonstro].todosMonstros
-        listaCriaturas.innerHTML = ""
-        for (let i = 0; i < monstros[numeroDoMonstro].todosMonstros.length; i++) {
-            listaCriaturas.innerHTML += 
-            `<button class="criaturas open" id="btId${i}">
-                <img src="${monstros[numeroDoMonstro].img[i]}"><img/>
-                <div class="name">${monstros[numeroDoMonstro].todosMonstros[i]}</div>
-            </button>`
+    function carregarCriaturas(tipoCriatura) {
+        listaCriaturas.innerHTML = monstros[tipoCriatura].todosMonstros;
+        listaCriaturas.innerHTML = "";
+        for (var i = 0; i < monstros[tipoCriatura].todosMonstros.length; i++) {
+            listaCriaturas.innerHTML +=
+                `<button class="criaturas" id="${monstros[tipoCriatura].inpId[i]}">
+                    <img src="${monstros[tipoCriatura].img[i]}"><img/>
+                    <div class="name">${monstros[tipoCriatura].todosMonstros[i]}</div>
+                </button>`;
         }
     }
 
-    carregarCriaturas(0)
+    carregarCriaturas(0);
+
+    const listaBt = [
+        document.getElementById('mostrarInfoAfogado'),
+        document.getElementById('mostrarInfoZumbi'),
+        document.getElementById('mostrarInfoCreeper'),
+        document.getElementById('mostrarInfoEsqueleto')
+    ];
+
+    listaBt.forEach((bt, index) => {
+        bt.addEventListener('click', () => {
+            modal.classList.add("opened");
+            p.textContent = monstros[0].info[index];
+        });
+    });
+
+    close.addEventListener('click', () => {
+        modal.classList.remove("opened");
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("opened");
+        }
+    });
 }
 
-btIdChange()
-
+carregarBt();

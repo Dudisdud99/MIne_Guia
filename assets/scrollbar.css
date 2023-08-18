@@ -1,5 +1,6 @@
   div.lista::-webkit-scrollbar {
     height: 16px;
+    
   }
   
   div.lista::-webkit-scrollbar-track {
@@ -28,8 +29,9 @@
 /*--body--*/
 
 body::-webkit-scrollbar{
-  background-color: rgb(37, 37, 37);
+  background-color: rgb(29, 29, 29);
   width: 1.5rem;
+  
 }
 
 body::-webkit-scrollbar-thumb {

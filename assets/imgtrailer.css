@@ -11,7 +11,7 @@ img.fundo{
 div#trailer{
   transform: translate(1vw,20vw);
   color: white;
-  c
+  font-size: larger;
   font-family:Arial, Helvetica, sans-serif;
   display: grid;
   justify-items: center;
@@ -69,10 +69,11 @@ div.linear-gradient{
 div#trailer a{
   background:  linear-gradient(90deg, rgb(255, 0, 128) 0%, rgb(255, 217, 0) 100%);
   width: 6rem;
-  height: 3rem;
+  height: 2.8rem;
   text-align: center;
   border-radius: 10px;
   margin-top: 1rem;
+  text-decoration: none;
 }
 
 div#trailer a:hover{
@@ -84,10 +85,5 @@ div#trailer a:hover{
 div#trailer a p{
   font-family:Arial, Helvetica, sans-serif;
   transform: translate(0,-0.5rem);
-  
-}
-
-div#trailer a{
-  text-decoration: none;
   color: black;
 }

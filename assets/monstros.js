@@ -1,22 +1,22 @@
 const divIframes = document.querySelector('.iframes');
 
 const elementosInfo = [
-    { checkbox: document.getElementById('mostrarInfoAfogado'), iframe: document.querySelector('.iframeAfogado') },
-    { checkbox: document.getElementById('mostrarInfoZumbi'), iframe: document.querySelector('.iframeZumbi') },
-    { checkbox: document.getElementById('mostrarInfoCreeper'), iframe: document.querySelector('.iframeCreeper') },
-    { checkbox: document.getElementById('mostrarInfoEsqueleto'), iframe: document.querySelector('.iframeEsqueleto') }
+    { bt: document.getElementById('mostrarInfoAfogado')},
+    { bt: document.getElementById('mostrarInfoZumbi')},
+    { bt: document.getElementById('mostrarInfoCreeper')},
+    { bt: document.getElementById('mostrarInfoEsqueleto')}
 ];
 
 divIframes.classList.add('escondido');
 elementosInfo.forEach(elemento => elemento.iframe.classList.add('escondido'))
 
 elementosInfo.forEach(elemento => {
-    elemento.checkbox.addEventListener('change', () => {
-        if (elemento.checkbox.checked) {
+    elemento.bt.addEventListener('change', () => {
+        if (elemento.bt.checked) {
             divIframes.classList.remove('escondido')
             elemento.iframe.classList.remove('escondido')
         } else {
-            if (elementosInfo.every(item => !item.checkbox.checked)) {
+            if (elementosInfo.every(item => !item.bt.checked)) {
                 divIframes.classList.add('escondido')
             }
             elemento.iframe.classList.add('escondido')
