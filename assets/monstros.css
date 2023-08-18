@@ -1,10 +1,12 @@
 @import "nav.css";
+@import "modal.css";
 @import "imgtrailer.css";
 @import "scrollbar.css";
 
 body{
   margin: 0%;
   background-color: #000000;
+  overflow-x: hidden;
 }
 
 
@@ -49,12 +51,12 @@ div.lista-mini{
   margin-right: 1.5rem;
 }
 
-div.lista-mini>div.criaturas>a>img{
+div.lista-mini>.criaturas img{
   height: 7rem;
   margin-bottom: 1rem;
 }
 
-div.lista-mini>div.criaturas{
+div.lista-mini>.criaturas{
   height: 10rem;
   margin-bottom: 1rem;
 }
@@ -73,100 +75,40 @@ div.tipo-monstros>p{
   margin-right: 1.5rem;
 }
 
-div.criaturas{
+.criaturas{
   margin: 0.4rem;
-  margin-bottom: 1rem;
   margin-top: 1rem;
-  height: 17rem;
+  height: 19rem;
   padding: 1rem;
   background:  rgb(236, 241, 255);
   border: 2px solid black;
   box-shadow: 3px 3px 3px black;
   color: rgb(0, 0, 0);
+  cursor: pointer;
   
 }
 
-div.name{
+div.nameMobLista{
   text-align: center;
+  font-size: 1.4rem;
 }
 
-div.criaturas>a>img{
+.criaturas img{
   height: 12rem;
   margin-bottom: 1rem;
   filter: drop-shadow( rgba(55, 56, 129, 0.781) 7px 7px 2px);
 }
 
-div.criaturas:hover{
+.criaturas:hover{
   transform: scale(115%);
-  background: linear-gradient( rgb(236, 241, 255), rgb(236, 241, 255), red);
+  background: linear-gradient( rgb(255, 0, 128) 0%, rgb(255, 217, 0)100%);
 }
 
-div.criaturas:hover>a>img{
+.criaturas:hover img{
   /*filter: drop-shadow( rgb(107, 0, 0) 7px 7px 2px);*/
 }
 
-.infoCriaturas{
-  width: 80vw;
-  height: 80vh;
-}
-
-.iframes{
-  position: fixed;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.555);
-  width: 100%;
-  height: 100%;
-}
-
-.iframes>div>div{
-  width: 80vw;
-  height: 2rem;
-  background: transparent;
-  margin-top: 2rem;
-}
-
-.voltar{
-  background-color: white;
-  width: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 7px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.voltar:hover{
-  transform: scale(120%);
-  transition: 0.2s;
-}
-
-.voltar>img{
-  width: 1.8rem;
-}
-
-.iframeEscondido{
+.escondido{
   display: none;
-}
-
-.mostrarInfo{
-  display: none;
-}
-
-.mostrarInfo+label{
-  margin-top: 0.5rem;
-  display: none;
-  height: 1.5rem;
-  width: 1.5rem;
-}
-.mostrarInfo+label>img{
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-.criaturas:hover label{
-  display: block;
 }
 

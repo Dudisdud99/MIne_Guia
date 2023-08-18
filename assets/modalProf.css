@@ -1,6 +1,5 @@
 .modal{
     position: fixed;
-    z-index: 5;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.459);
     display: grid;
@@ -16,8 +15,8 @@
 }
 
 .modal .window{
-    width: 70vw;
-    height: 80vh;
+    width: 50vw;
+    height: 50vh;
     background-color: white;
     border-radius: 1vw;
     padding: 1rem;
@@ -41,20 +40,10 @@
 }
 
 .modal .window .content{
-flex: 1;
+    flex: 1;
 }
 
 .modal .window .actions{
     display: flex;
     justify-content: flex-end;
-}
-
-
-.divImgMobModal{
-    width: 30%;
-    height: 92%;
-}
-
-.divImgMobModal>img{
-    width: 100%;
 }

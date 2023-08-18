@@ -3,6 +3,8 @@ const listaIframes = document.querySelector(".iframes");
 const modal = document.querySelector('.modal');
 const p = modal.querySelector('.info');
 const close = modal.querySelector('.close');
+const h1Modal = modal.querySelector('.nameMobModal');
+const divImgMobModal = modal.querySelector('.divImgMobModal');
 
 async function carregarBt() {
     const request = await fetch("monstros.json");
@@ -17,7 +19,7 @@ async function carregarBt() {
             listaCriaturas.innerHTML +=
                 `<button class="criaturas" id="${monstros[tipoCriatura].inpId[i]}">
                     <img src="${monstros[tipoCriatura].img[i]}"><img/>
-                    <div class="name">${monstros[tipoCriatura].todosMonstros[i]}</div>
+                    <div class="nameMobLista">${monstros[tipoCriatura].todosMonstros[i]}</div>
                 </button>`;
         }
     }
@@ -34,7 +36,9 @@ async function carregarBt() {
     listaBt.forEach((bt, index) => {
         bt.addEventListener('click', () => {
             modal.classList.add("opened");
-            p.textContent = monstros[0].info[index];
+            h1Modal.innerHTML = monstros[tipoCriatura].todosMonstros[index];
+            divImgMobModal.innerHTML = `<img src="$${monstros[tipoCriatura].img[i]}" class"imgMobModal"></img>`;
+            p.textContent = monstros[tipoCriatura].info[index];
         });
     });
 
