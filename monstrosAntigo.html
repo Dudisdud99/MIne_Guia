@@ -4,10 +4,8 @@
     <meta charset='utf-8'>
     <title>Monstros - Mine_Guia</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="assets\monstros copy.css">
-    <script defer src='assets/nav.js'></script>
-    <script defer async src='assets/carregarCriaturas.js'></script>
-    <script defer async src='assets/popups.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href="assets\monstros.css">
+    <script defer async src='assets/monstros.js'></script>
     <link rel="icon" href="img/Grass_Block.webp">
 </head>
 <body>
@@ -98,23 +96,208 @@
             </label>
         </div>
     </nav>
-    <!--modal-->
-    <div class="modal">
-        <div class="window">
-            <button class="close">X</button>
-            <div class="content">
-                <h1>Modal</h1>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur id nostrum laborum impedit et, quod iusto optio ullam repudiandae illum modi eum magnam cum, voluptatum excepturi odio corrupti. Voluptatum, qui!</p>        
+    <!--iframes-->
+    <div class="iframes">
+        <div class="iframeAfogado">
+            <div >
+                <label for="mostrarInfoAfogado" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
             </div>
-            <div class="actions">
-                <button>Salvar</button>
+            <iframe src="afogado copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+        <div class="iframeZumbi">
+            <div >
+                <label for="mostrarInfoZumbi" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
             </div>
+            <iframe src="zumbi copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+        <div class="iframeCreeper">
+            <div >
+                <label for="mostrarInfoCreeper" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
+            </div>
+            <iframe src="creeper copy.html" frameborder="0" class="infoCriaturas"></iframe>
+        </div>
+        <div class="iframeEsqueleto">
+            <div >
+                <label for="mostrarInfoEsqueleto" class="voltar">
+                    <img src="img/voltarVermelho.png" alt="">
+                </label>
+            </div>
+            <iframe src="esqueleto copy.html" frameborder="0" class="infoCriaturas"></iframe>
         </div>
     </div>
     <!--conteudo-->
     <div id="conteudo">
         <p>Todos os monstros</p>
         <div class="lista">
+            <div class="criaturas">
+                <a href="afogado.html"><img src="img/Afogado.webp" alt=""></a>
+                <div class="name">Afogado</div>
+                <input type="checkbox" id="mostrarInfoAfogado" class="mostrarInfo">
+                <label for="mostrarInfoAfogado" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
+            </div>
+            <div class="criaturas">
+                <a href="zumbi.html"><img src="img/Zombie-PNG.png" alt=""></a>
+                <div class="name">Zumbi</div>
+                <input type="checkbox" id="mostrarInfoZumbi" class="mostrarInfo">
+                <label for="mostrarInfoZumbi" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
+            </div>
+            <div class="criaturas">
+                <a href="esqueleto.html"><img src="img/esqueleto.webp" alt=""></a>
+                <div for="" class="name">Esqueleto</div>
+                <input type="checkbox" id="mostrarInfoEsqueleto" class="mostrarInfo">
+                <label for="mostrarInfoEsqueleto" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
+            </div>
+            <div class="criaturas">
+                <a href="creeper.html"><img src="img/Creeper.webp" alt=""></a>
+                <div for="" class="name">Creeper</div>
+                <input type="checkbox" id="mostrarInfoCreeper" class="mostrarInfo">
+                <label for="mostrarInfoCreeper" class="voltar">
+                    <img src="img/exclamacaoVermelha.png" alt="">
+                </label>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Phantom_BE1.webp" alt=""></a>
+                <div class="name">Phanton</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Shulker.webp" alt=""></a>
+                <div for="" class="name">Shulker</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Evoker.webp" alt=""></a>
+                <div for="" class="name">Invocador</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Vex_JE4.webp" alt=""></a>
+                <div for="" class="name">Vex</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Zombie_Villager_Base.webp" alt=""></a>
+                <div for="" class="name">Zombie<br>Villager</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Elder_Guardian.webp" alt=""></a>
+                <div for="" class="name">Guardião<br>mestre</div>
+            </div>
+
+
+            
+            <div class="criaturas">
+                <a href=""><img src="img/Spider_Jockey.webp" alt=""></a>
+                <div for="" class="name">Jockey de aranha</div>
+            </div>
+            <div class="criaturas">
+                <a href="wardem.html"><img src="img/Warden_glowing_soul_heart.webp" alt=""></a>
+                <div for="" class="name">Warden</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Witch_BE.webp" alt=""></a>
+                <div for="" class="name">Bruxa</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Guardian_29.webp" alt=""></a>
+                <div for="" class="name">Guardião</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Slime_JE3_BE2.webp" alt=""></a>
+                <div for="" class="name">Slime</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Magma_Cube.webp" alt=""></a>
+                <div for="" class="name">Cubo de magma</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Wither_Skeleton_Targeting.webp" alt=""></a>
+                <div for="" class="name">Esqueleto<br>whiter</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Blaze.webp" alt=""></a>
+                <div for="" class="name">Blaze</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Ghast_shooting_JE2_BE2.webp" alt=""></a>
+                <div for="" class="name">Ghast</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Endermite_22.webp" alt=""></a>
+                <div for="" class="name">Endermite</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Hoglin_JE2.webp" alt=""></a>
+                <div class="name">Hoglin</div>
+            </div>
+            <div class="criaturas" id="dragao-ender">
+                <a href=""><img src="img/Ender_Dragon.webp" alt=""></a>
+                <div for="" class="name">Dragão ender</div>
+            </div>
+            <div class="criaturas" id="wither-boss">
+                <a href=""><img src="img/Wither_boss.webp" alt=""></a>
+                <div for="" class="name">Wither boss</div>
+            </div>
+            <div class="criaturas">
+                <a href="enderman.html"><img src="img/Endermanpng.webp" alt=""></a>
+                <div class="name">Enderman</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Iron_Golem_JE2_BE2.webp" alt=""></a>
+                <div class="name">Iron golem</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Spider_JE4_BE3.webp" alt=""></a>
+                <div class="name">Aranha</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Piglin_targeting_BE2.webp" alt=""></a>
+                <div class="name">Piglin</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Zombified_Piglin_with_Crossbow_JE4.webp" alt=""></a>
+                <div class="name">Piglin<br>zumbi</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Snow_Golem.webp" alt=""></a>
+                <div class="name">Golem de<br> neve</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Blaze.webp" alt=""></a>
+                <div for="" class="name">Blaze</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Hoglin_JE2.webp" alt=""></a>
+                <div class="name">Hoglin</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Wither_Skeleton_Targeting.webp" alt=""></a>
+                <div for="" class="name">Esqueleto<br>whiter</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Piglin_targeting_BE2.webp" alt=""></a>
+                <div class="name">Piglin</div>
+            </div>
+            <div class="criaturas">
+                <a href=""><img src="img/Zombified_Piglin_with_Crossbow_JE4.webp" alt=""></a>
+                <div class="name">Piglin<br>zumbi</div>
+            </div>
+            <div class="criaturas" id="dragao-ender">
+                <a href=""><img src="img/Ender_Dragon.webp" alt=""></a>
+                <div for="" class="name">Dragão ender</div>
+            </div>
+            <div class="criaturas" id="wither-boss">
+                <a href=""><img src="img/Wither_boss.webp" alt=""></a>
+                <div for="" class="name">Wither boss</div>
+            </div>
         </div>
         <div class="tipo-monstros">
             <h2>Monstros hostis</h2>
