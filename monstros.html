@@ -4,9 +4,9 @@
     <meta charset='utf-8'>
     <title>Monstros - Mine_Guia</title>
     <meta nameMobLista='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href="assets\css\monstros.css">
+    <link rel='stylesheet' type='text/css' media='screen' href="assets/css/monstros.css">
     <script defer src='assets/js/nav.js'></script>
-    <script defer async src='assets/js/carregarCriaturas.js'></script>
+    <script defer async src='assets/js/monstros.js'></script>
     <link rel="icon" href="img/Grass_Block.webp">
 </head>
 <body>
@@ -101,13 +101,18 @@
     <div class="modal">
         <div class="window">
             <button class="close"><p>x</p></button>
+            <img src="assets/img/quiz.jpg" alt="">
             <div class="content">
                 <h1 class="nameMobModal"></h1>
                 <div>
-                    <div class="divImgMobModal"></div>
-                    <div class="conteudoModal"><p class="info"></p></div>
+                    <div class="imgStatusModal">
+                        <div class="divImgMobModal"></div>
+                        <div class="statusMobModal"></div>
+                    </div>
+                    <div class="textoModal"><p class="info"></p></div>
                 </div>
             </div>
+            <div class="gradienteModal"></div>
         </div>
     </div>
     <!--conteudo-->

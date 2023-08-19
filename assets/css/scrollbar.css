@@ -43,13 +43,12 @@ body::-webkit-scrollbar-thumb {
 
 /*--modal--*/
 
-.conteudoModal::-webkit-scrollbar{
+.window::-webkit-scrollbar{
   background-color: rgb(29, 29, 29);
   width: 1.5rem;
-  
 }
 
-.conteudoModal::-webkit-scrollbar-thumb {
+.window::-webkit-scrollbar-thumb {
   background:  linear-gradient( rgb(255, 0, 128) 0%, rgb(255, 217, 0) 100%);
   border-radius: 10px;
   border: 6px solid transparent;
