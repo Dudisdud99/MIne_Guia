@@ -10,15 +10,14 @@ async function carregarBt() {
     const request = await fetch("monstros.json");
     const monstros = await request.json();
 
-    tipoCriatura = 0;//monstro
+    let tipoCriatura = 0; // monstro
 
     function carregarCriaturas(tipoCriatura) {
-        listaCriaturas.innerHTML = monstros[tipoCriatura].todosMonstros;
         listaCriaturas.innerHTML = "";
         for (var i = 0; i < monstros[tipoCriatura].todosMonstros.length; i++) {
             listaCriaturas.innerHTML +=
                 `<button class="criaturas" id="${monstros[tipoCriatura].inpId[i]}">
-                    <img src="${monstros[tipoCriatura].img[i]}"><img/>
+                    <img src="${monstros[tipoCriatura].img[i]}"></img>
                     <div class="nameMobLista">${monstros[tipoCriatura].todosMonstros[i]}</div>
                 </button>`;
         }
@@ -37,7 +36,7 @@ async function carregarBt() {
         bt.addEventListener('click', () => {
             modal.classList.add("opened");
             h1Modal.innerHTML = monstros[tipoCriatura].todosMonstros[index];
-            divImgMobModal.innerHTML = `<img src="$${monstros[tipoCriatura].img[i]}" class"imgMobModal"></img>`;
+            divImgMobModal.innerHTML = `<img src="${monstros[tipoCriatura].img[index]}" class="imgMobModal"></img>`;
             p.textContent = monstros[tipoCriatura].info[index];
         });
     });
