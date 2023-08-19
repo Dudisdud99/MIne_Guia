@@ -64,7 +64,7 @@ function info(){
 
 
 async function main() {
-  const request = await fetch("quiz.json")
+  const request = await fetch('assets/json/quiz.json');
   const quiz = await request.json()
 
   numeroDaPergunta = 0

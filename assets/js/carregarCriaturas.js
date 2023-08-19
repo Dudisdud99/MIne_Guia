@@ -7,7 +7,7 @@ const h1Modal = modal.querySelector('.nameMobModal');
 const divImgMobModal = modal.querySelector('.divImgMobModal');
 
 async function carregarBt() {
-    const request = await fetch("monstros.json");
+    const request = await fetch("assets/json/monstros.json");
     const monstros = await request.json();
 
     let tipoCriatura = 0; // monstro
@@ -37,7 +37,7 @@ async function carregarBt() {
             modal.classList.add("opened");
             h1Modal.innerHTML = monstros[tipoCriatura].todosMonstros[index];
             divImgMobModal.innerHTML = `<img src="${monstros[tipoCriatura].img[index]}" class="imgMobModal"></img>`;
-            p.textContent = monstros[tipoCriatura].info[index];
+            p.innerHTML = monstros[tipoCriatura].info[index];
         });
     });
 

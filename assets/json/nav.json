@@ -1,0 +1,29 @@
+[
+    {
+      "checkboxId": "mostrarAbas",
+      "elementClass": "abas",
+      "iconClass": "mostrarAbas",
+      "labelClass": "mostrarAbas",
+      "showClass": "escondido",
+      "iconSrcShow": "assets/img/3linhasBranco.png",
+      "iconSrcHide": "assets/img/3linhasVermelho.png"
+    },
+    {
+      "checkboxId": "mostrarPesquisa",
+      "elementId": "pesquisa",
+      "iconClass": "mostrarPesquisa",
+      "labelClass": "mostrarPesquisa",
+      "showClass": "escondido",
+      "iconSrcShow": "assets/img/lupa-branca-removebg-preview.png",
+      "iconSrcHide": "assets/img/lupa-vermelha.png"
+    },
+    {
+      "checkboxId": "mostrarUsuario",
+      "iconClass": "mostrarUsuario",
+      "labelClass": "mostrarUsuario",
+      "showClass": "escondido",
+      "iconSrcShow": "assets/img/usuarioBranco.png",
+      "iconSrcHide": "assets/img/usuarioVermelho.png"
+    }
+  ]
+  
