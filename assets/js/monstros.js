@@ -9,7 +9,7 @@ const dropMobModal = modal.querySelector('.dropMobModal');
 
 async function carregarBt() {
   try {
-    const response = await fetch("assets/json/monstros copy.json");
+    const response = await fetch("assets/json/monstros.json");
     const monstros = await response.json();
 
     function carregarCriaturas() {
