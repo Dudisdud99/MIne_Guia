@@ -13,13 +13,6 @@ body{
     justify-content: center;
 }
 
-.final{
-    opacity: 0;
-    /*visibility: hidden;*/
-    background-color: black;
-    width: 100%;
-}
-
 .quiz{
     z-index: 5;
     position: absolute;
@@ -99,62 +92,6 @@ body{
     border-radius: 10px;
 }
 
-.comecar{
-    z-index: 3;
-    position: absolute;
-    background-color: white;
-    color: red;
-    font-size: x-large;
-    padding: 1rem;
-    border: none;
-    border-radius: 10px;
-    margin-top: 7rem;
-    transition: 0.2s;
-}
-.comecar:hover{
-    transform: scale(120%);
-    cursor: pointer;
-    transition: 0.2s;
-}
-.comecar:active{
-    transform: scale(100%);
-    background-color: red;
-    color: white;
-    transition: 0.2s;
-}
-
-.acertou{
-    background-color: green;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.acertou>h1{
-    background-color: white;
-    color: black;
-    padding: 1rem;
-    border-radius: 10px;
-}
-
-.errou{
-    background-color: red;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.errou>h1{
-    background-color: white;
-    color: black;
-    padding: 1rem;
-    border-radius: 10px;
-}
-
 .escondido{
     display: none;
 }
@@ -165,4 +102,77 @@ body{
 
 .final{
     background-color: blue;
+}
+
+.modal{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.459);
+    display: grid;
+    place-items: center;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 5;
+}
+
+.modal.opened,
+.final.opened{
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal .window{
+    width: 20vw;
+    height: 20vh;
+    background-color: white;
+    border-radius: 1vw;
+    padding: 1rem;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    background-color: white;
+    font-size: 3rem;
+}
+
+.acertou,
+.errou{
+    opacity: 0;
+    visibility: hidden;
+    color: black;
+    display: none;
+    font-size: 3rem;
+}
+
+.modal.modalAcertou{
+    background-color: green;
+}
+.modal.modalErrou{
+    background-color: rgb(255, 0, 0);
+}
+
+.acertou.opened,
+.errou.opened{
+    opacity: 1;
+    visibility: visible;
+    display: block;
+}
+
+.final>div{
+    width: 50vw;
+    height: 50vh;
+    background-color: white;
+    
+}
+
+.final{
+    position: fixed;
+    z-index: 6;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.445);
+    display: grid;
+    place-items: center;
+    transition: 0.2s;
+    opacity: 0;
+    visibility: hidden;
 }

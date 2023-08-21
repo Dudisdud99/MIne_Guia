@@ -1,6 +1,4 @@
 const modal = document.querySelector('.modal')
-const close = modal.querySelector('.close')
-const open = document.querySelector('.abrir')
 
 open.addEventListener('click', () => {
     modal.classList.add("opened")

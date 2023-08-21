@@ -1,65 +1,68 @@
+//declaração de variaveis 
 
 const Quiz = document.querySelector(".quiz")
-const elPergunta = Quiz.querySelector(".pergunta")
-const elAlternativas = Quiz.querySelector(".alternativas")
+const pergunta = Quiz.querySelector('.pergunta')
+const alternativas = Quiz.querySelector(".alternativas")
 const questaoAtual = Quiz.querySelector(".questao")
 const totalErros = Quiz.querySelector(".erros")
 const totalAcertos = Quiz.querySelector(".acertos")
-const totalErrosFinal = Quiz.querySelector(".errosFinal")
-const totalAcertosFinal = Quiz.querySelector(".acertosFinal")
-const errou = document.querySelector(".errou")
-const acertou = document.querySelector(".acertou")
-const conteudo = document.querySelector('.conteudo')
-const fundo = document.querySelector('.fundo')
+
+const modal = document.querySelector('.modal')
+const errou = document.querySelector('.errou')
+const acertou = document.querySelector('.acertou')
+
 const final = document.querySelector('.final')
+const totalErrosFinal = document.querySelector(".errosFinal")
+const totalAcertosFinal = document.querySelector(".acertosFinal")
+
 let contErros = 0
 let contAcertos = 0
 var atraso = 1000
 
-errou.classList.add('escondido')
-acertou.classList.add('escondido')
-final.classList.add('escondido')
-
-
+//funcionalidade
 
 function mensagemAcertou(){
-  acertou.classList.remove('escondido')
-  conteudo.classList.add('escondido')
-  fundo.classList.add('escondido')
+  modal.classList.add("opened")
+  acertou.classList.add("opened")
+  modal.classList.add("modalAcertou")
+  //.innerHTML = "Acertou"
 
   setTimeout(function() {
-    acertou.classList.add('escondido')
-    conteudo.classList.remove('escondido')
-    fundo.classList.remove('escondido')
+    modal.classList.remove("opened")
+    acertou.classList.remove("opened")
+    modal.classList.remove("modalAcertou")
   }, atraso)
 }
 
 function mensagemErrou(){
-  errou.classList.remove('escondido')
-  conteudo.classList.add('escondido')
-  fundo.classList.add('escondido')
+  modal.classList.add("opened")
+  errou.classList.add("opened")
+  modal.classList.add("modalErrou")
+  //.innerHTML = "Errou"
 
   setTimeout(function() {
-    errou.classList.add('escondido')
-    conteudo.classList.remove('escondido')
-    fundo.classList.remove('escondido')
+    modal.classList.remove("opened")
+    errou.classList.remove("opened")
+    modal.classList.remove("modalErrou")
   }, atraso)
 }
 
-function info(){
-  let erros = Quiz.querySelector(".totalErros>h1")
-  let acertos = Quiz.querySelector(".totalAcertos>h1")
-  let questao = Quiz.querySelector(".questaoAtual>h1")
-  erros.textContent = "Erros:"
-  acertos.textContent = "Acertos:"
-  questao.textContent = "Questão:"
-  erros.classList.add('titulo')
-  acertos.classList.add('titulo')
-  questao.classList.add('titulo')
-  totalErros.classList.add('titulo')
-  totalAcertos.classList.add('titulo')
-  questaoAtual.classList.add('titulo')
-  elPergunta.classList.add('titulo')
+function info() {
+  const elementos = [
+    ".totalErros>h1",
+    ".totalAcertos>h1",
+    ".questaoAtual>h1",
+  ];
+
+  elementos.forEach((elemento) => {
+    const el = Quiz.querySelector(elemento);
+    el.classList.add('titulo');
+  });
+
+  totalErros.classList.add('titulo');
+  totalAcertos.classList.add('titulo');
+  questaoAtual.classList.add('titulo');
+  pergunta.classList.add('titulo');
 }
 
 
@@ -75,43 +78,50 @@ async function main() {
     if (numeroDaPergunta > quiz.length){
       return
     }
-    elPergunta.innerHTML = quiz[nPergunta].pergunta
-    elAlternativas.innerHTML = ""
+    pergunta.innerHTML = quiz[nPergunta].pergunta
+    alternativas.innerHTML = ""
     // for (let i = 0; i < 9; i++) {
     //   elRespostas.innerHTML += `<button>${quiz[nPergunta].alternativas[i]}</button>`
     // }
-    quiz[nPergunta].alternativas.forEach(alt => elAlternativas.innerHTML += `<button>${alt}</button>`)
+    quiz[nPergunta].alternativas.forEach(alt => alternativas.innerHTML += `<button>${alt}</button>`)
   }
 
-  elAlternativas.addEventListener("click", ev => {
+  alternativas.addEventListener("click", ev => {
     const alternativaClicada = ev.target;
-    
+  
     if (!alternativaClicada || !alternativaClicada.closest("button"))
         return
-
-
-    const arrayAlternativas = [...elAlternativas.children]
+  
+    const arrayAlternativas = [...alternativas.children]
     const numeroDaAlternativaClicada = arrayAlternativas.indexOf(alternativaClicada)
+    
     if (numeroDaAlternativaClicada == quiz[numeroDaPergunta].resposta) {
+      if (numeroDaPergunta >= quiz.length - 1) {
+        final.classList.add('opened')
+        totalErrosFinal.textContent = contErros++
+        totalAcertosFinal.textContent = contAcertos++
+        return
+      }
       carregarPergunta(++numeroDaPergunta)
-      questaoAtual.textContent = numeroDaPergunta+1
-      totalAcertos.textContent++
+      questaoAtual.textContent = numeroDaPergunta + 1
+      contAcertos++
+      totalAcertos.textContent = contAcertos
       mensagemAcertou()
-      return
+    } 
+    else {
+      mensagemErrou()
+      contErros++
+      totalErros.textContent = contErros
     }
-    mensagemErrou()
-    totalErros.innerText++
   })
+  
+  
 
   questaoAtual.textContent = numeroDaPergunta+1
 
   carregarPergunta(0)
 }
 
-function comecar(){
-  let bt = document.querySelector(".comecar")
-  bt.style.display = 'none'
-  main()
-  info()
-}
+main()
+info()
 
