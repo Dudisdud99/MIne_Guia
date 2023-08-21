@@ -1,4 +1,3 @@
-
 img#home{
   margin-left: 1rem;
   width: 12rem;
@@ -47,13 +46,23 @@ nav :is(ul,li) {
   display: inline-block;
 }
   
-nav a {
+nav a{
   color: red;
   text-decoration: none;
   padding: 3px;
   border-radius: 5px;
   transition: 0.3s;
   font-size: large;
+}
+
+nav div>ul>li>div {
+  color: red;
+  text-decoration: none;
+  padding: 3px;
+  border-radius: 5px;
+  transition: 0.3s;
+  font-size: large;
+  margin-bottom: 0.8rem;
 }
   
 nav div>ul>li:hover {
@@ -64,14 +73,14 @@ nav div>ul>li:hover {
   
 }
 
-nav div>ul>li:hover>a{
+nav div>ul>li:hover>div{
   transition: 0.3s;
   margin-right: 0.5rem;
   visibility: visible;
   opacity: 1;
 }
 
-nav div>ul>li>a{
+nav div>ul>li>div{
   opacity: 0;
   visibility: hidden;
   color: white;
@@ -290,6 +299,52 @@ nav li {
 }
 
 .mostrarUsuario>img{
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+@media (max-width: 768px) {
+  nav div>ul{
+    flex-direction: column;
+  }
+
+  nav{
+    width: auto;
+    height: 100%;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.514);
+  }
+
+  .linkInicio1{
+    display: none;
+  }
+
+  .linkInicio2{
+    display: grid;
+    place-items: center;
+  }
+  nav div>ul>li:hover{
+
+  }
+  nav div>ul>li:hover>ul{
+    height: auto;
+    width: 100%;
+    transform: translate(4rem,0);
+  }
+
+  nav div>ul>li:hover>ul>li{
+
+  }
+}
+
+.linkInicio2{
+  display: none;
+  background-color: white;
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+.linkInicio2>img{
   width: 1.3rem;
   height: 1.3rem;
 }
