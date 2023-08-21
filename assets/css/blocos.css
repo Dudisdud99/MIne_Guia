@@ -63,3 +63,9 @@
     transform: scale(115%);
     background: linear-gradient(rgba(174, 0, 255, 0.993), rgb(236, 241, 255),rgb(236, 241, 255));
   }
+
+  @media (max-width: 768px) {
+    div#conteudo{
+      transform: translate(0, 50vw);
+    }
+  }

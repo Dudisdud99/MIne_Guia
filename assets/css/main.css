@@ -170,3 +170,8 @@ div.criaturas:hover>a>img{
   display: block;
 }
 
+@media (max-width: 768px) {
+  div#conteudo{
+    transform: translate(0, 50vw);
+  }
+}

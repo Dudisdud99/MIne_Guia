@@ -87,3 +87,18 @@ div#trailer a p{
   transform: translate(0,-0.5rem);
   color: black;
 }
+
+@media (max-width: 768px) {
+  button#trailer{
+    height: 2rem;
+    font-size: large;
+  }
+  button#trailer>img{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  button#trailer+a{
+    height: 2rem;
+  }
+}

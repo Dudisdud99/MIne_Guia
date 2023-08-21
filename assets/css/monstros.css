@@ -112,3 +112,8 @@ div.nameMobLista{
   display: none;
 }
 
+@media (max-width: 768px) {
+  div#conteudo{
+    transform: translate(0, 50vw);
+  }
+}
