@@ -270,6 +270,10 @@ nav li {
   color: white;
 }*/
 
+* {
+  box-sizing: border-box;
+}
+
 #mostrarUsuario{
   width: 0%;
   height: 0%;
