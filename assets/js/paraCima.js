@@ -1,4 +1,4 @@
-let meuBtn = document.querySelector('.meuBtn');
+let btn = document.querySelector('.paraCima');
 
 window.onscroll = function() {scrollFunction()};
 
