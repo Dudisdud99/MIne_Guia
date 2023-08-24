@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -5,8 +6,8 @@
     <title>Meu Quiz!</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/css/quiz.css'>
+    <script defer src='assets/js/nav.js'></script>
     <script defer async src='assets/js/quiz.js'></script>
-    <script defer async src='assets/js/nav.js'></script>
   </head>
   <body>
     <nav>
@@ -99,32 +100,35 @@
     <!--conteudo-->
     <div class="conteudo">
         <div class="quiz">
-            <div class="questaoAtual">
-                <h1>Questao</h1>
+            <div class="divPergunta">
                 <h1 class="questao"></h1>
+                <h1 class="pergunta"></h1>
             </div>
-            <div class="divPergunta"><h1 class="pergunta"></h1></div>
-            <div class="alternativas"></div>
-            <div class="totalErros">
-                <h1>Erros:</h1>
-                <h1 class="erros"></h1>
+            <div>
+                <div class="alternativas"></div>
             </div>
-            <div class="totalAcertos">
-                <h1>Acertos:</h1>
-                <h1 class="acertos"></h1>
+            <div class="placar">
+                <div class="totalErros">
+                    <h1>Erros:</h1>
+                    <h1 class="erros"></h1>
+                </div>
+                <div class="totalAcertos">
+                    <h1>Acertos:</h1>
+                    <h1 class="acertos"></h1>
+                </div>
             </div>
         </div>
         <!--FINAL-->
         <div class="final">
             <div>
+                <div class="finalTexto">Parabens por perder seu tempo</div>
                 <div class="totalErrosFinal">
                     <h1>Erros: <div class="errosFinal"></div></h1>
-                    
                 </div>
                 <div class="totalAcertosFinal">
                     <h1>Acertos: <div class="acertosFinal"></div></h1>
-                    
                 </div>
+                <button class="reiniciar" onclick="window.location.href = 'quiz.html'">Reiniciar</button>
             </div>
         </div>
         <!--modal-->
@@ -139,3 +143,4 @@
     <button class="paraCima"><img src="assets/img/iconSeta.png" alt=""></button>
   </body>
 </html>
+

@@ -14,9 +14,10 @@ const acertou = document.querySelector('.acertou')
 const final = document.querySelector('.final')
 const totalErrosFinal = document.querySelector(".errosFinal")
 const totalAcertosFinal = document.querySelector(".acertosFinal")
+const reiniciar = document.querySelector(".reiniciar")
 
-let contErros = 0
-let contAcertos = 0
+var contErros 
+var contAcertos 
 var atraso = 1000
 
 //funcionalidade
@@ -47,30 +48,15 @@ function mensagemErrou(){
   }, atraso)
 }
 
-function info() {
-  const elementos = [
-    ".totalErros>h1",
-    ".totalAcertos>h1",
-    ".questaoAtual>h1",
-  ];
-
-  elementos.forEach((elemento) => {
-    const el = Quiz.querySelector(elemento);
-    el.classList.add('titulo');
-  });
-
-  totalErros.classList.add('titulo');
-  totalAcertos.classList.add('titulo');
-  questaoAtual.classList.add('titulo');
-  pergunta.classList.add('titulo');
-}
-
 
 async function main() {
   const request = await fetch('assets/json/quiz.json');
   const quiz = await request.json()
 
+  contErros = 0
+  contAcertos = 0
   numeroDaPergunta = 0
+
   totalErros.textContent = contErros
   totalAcertos.textContent = contAcertos
 
@@ -99,7 +85,7 @@ async function main() {
       if (numeroDaPergunta >= quiz.length - 1) {
         final.classList.add('opened')
         totalErrosFinal.textContent = contErros++
-        totalAcertosFinal.textContent = contAcertos++
+        totalAcertosFinal.textContent = contAcertos+1
         return
       }
       carregarPergunta(++numeroDaPergunta)
@@ -122,6 +108,6 @@ async function main() {
   carregarPergunta(0)
 }
 
+
 main()
 info()
-

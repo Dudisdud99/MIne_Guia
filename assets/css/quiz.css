@@ -17,11 +17,9 @@ body{
     z-index: 5;
     position: absolute;
     transform: translate(0,10rem);
-    width: 85%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    grid-template-columns: repeat(4,1fr); 
-    grid-template-rows: repeat(3,1fr);
     color: white;
 }
 
@@ -29,22 +27,16 @@ body{
     padding: 1rem; 
 }
 
-.questaoAtual{
-    grid-column-start: 1;
-    grid-column-end: 2;
-    display: flex;
-    justify-content: center;
-}
-
 .divPergunta{
-    grid-column-start: 2;
-    grid-column-end: 5;
     justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.692);
+    border-radius: 10px;
 }
 
 .alternativas{
-    grid-column-start: 1;
-    grid-column-end: 5;
     display: grid;
     grid-template-columns: repeat(10,1fr);
     justify-content: center;
@@ -59,6 +51,7 @@ body{
     font-size: x-large;
     border: none;
     transition: 0.2s;
+    height: 5rem;
 }
 .alternativas button:hover{
     transform: scale(120%);
@@ -72,18 +65,13 @@ body{
     transition: 0.2s;
 }
 
-.totalErros{
-    grid-column-start: 1;
-    grid-column-end: 3;
+.totalErros,.totalAcertos{
     display: flex;
     justify-content: center;
-}
-
-.totalAcertos{
-    grid-column-start: 3;
-    grid-column-end: 5;
-    display: flex;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.733);
+    border-radius: 10px;
+    height: 5rem;
+    padding: 0.3rem;
 }
 
 .titulo{
@@ -162,7 +150,9 @@ body{
     width: 50vw;
     height: 50vh;
     background-color: white;
-    
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
 }
 
 .final{
@@ -178,5 +168,44 @@ body{
 }
 
 .paraCima{
-    
+    display: none;
+}
+
+.finalTexto{
+    text-align: center;
+    font-size: 2rem;
+    background-color: blueviolet;
+    padding: 0.5rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.reiniciar{
+    background-color: red;
+    border-radius: 10px;
+    right: 1rem;
+    padding: 0.8rem;
+    color: white;
+    border: none;
+    font-size: large;
+    position: absolute;
+    bottom: 1rem;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reiniciar:hover{
+    transform: scale(110%);
+    transition: 0.2s;
+}
+
+.reiniciar:active{
+    transform: scale(90%);
+    transition: 0.2s;
+}
+
+.placar{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
 }
