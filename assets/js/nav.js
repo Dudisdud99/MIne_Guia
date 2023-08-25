@@ -31,7 +31,6 @@ async function loadElementsFromJson() {
   }
 }
 
-// Função para alternar a visibilidade dos elementos
 function toggleElement(checkbox, element, icon, label, showClass, iconSrcShow, iconSrcHide) {
   if (checkbox.checked) {
     element.classList.remove(showClass);
@@ -46,5 +45,4 @@ function toggleElement(checkbox, element, icon, label, showClass, iconSrcShow, i
   }
 }
 
-// Chame a função para carregar os elementos do JSON quando o documento estiver pronto
 document.addEventListener('DOMContentLoaded', loadElementsFromJson);
