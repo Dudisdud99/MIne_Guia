@@ -66,6 +66,6 @@
 
   @media (max-width: 768px) {
     div#conteudo{
-      transform: translate(0, 130vw);
+      transform: translate(0, 150vw);
     }
   }
