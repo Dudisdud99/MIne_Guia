@@ -9,7 +9,7 @@ body{
 
 
 div#conteudo{
-  transform: translate(0, 140vw);
+  transform: translate(0, 33vw);
   font-size: larger;
   font-family:Arial, Helvetica, sans-serif;
   position: absolute;
@@ -93,6 +93,6 @@ div.criaturas:hover{
 
 @media (max-width: 768px) {
   div#conteudo{
-    transform: translate(0, 50vw);
+    transform: translate(0, 130vw);
   }
 }

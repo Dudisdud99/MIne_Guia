@@ -7,6 +7,14 @@ const divImgMobModal = modal.querySelector('.divImgMobModal');
 const statusMobModal = modal.querySelector('.statusMobModal > p');
 const dropMobModal = modal.querySelector('.dropMobModal');
 
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
+const fundo = document.querySelector('.fundo')
+
+if(screenWidth<768){
+    fundo.src = "assets/img/mobsCelular.jpg"
+}
+
 async function carregarBt() {
   try {
     const response = await fetch("assets/json/monstros.json");
