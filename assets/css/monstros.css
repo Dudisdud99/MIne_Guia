@@ -86,7 +86,6 @@
     box-shadow: 3px 3px 3px black;
     color: rgb(0, 0, 0);
     cursor: pointer;
-    
   }
 
   div.nameMobLista{
@@ -104,11 +103,7 @@
     transform: scale(115%);
     background: linear-gradient( rgb(255, 0, 128) 0%, rgb(255, 217, 0)100%);
   }
-
-  .criaturas:hover img{
-    /*filter: drop-shadow( rgb(107, 0, 0) 7px 7px 2px);*/
-  }
-
+  
   .escondido{
     display: none;
   }
