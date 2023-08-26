@@ -245,7 +245,7 @@ e{
     height: 1.3rem;
   }
 
-  #pesquisa{
+  #inpPesquisa{
     background-color: white;
     height: 2.3rem;
     border-radius: 10px;
@@ -255,6 +255,7 @@ e{
     margin-left: 2rem;
     margin-right: 2rem;
     font-size: large;
+    top:0;
   }
 
   #mostrarUsuario{
@@ -492,6 +493,7 @@ e{
   .selecionado{
     background:  red;
     transition: 0.5s;
+    display: flex;
   }
 e{
     width: 1.3rem;
@@ -554,7 +556,7 @@ e{
     height: 1.3rem;
   }
 
-  #pesquisa{
+  #inpPesquisa{
     background-color: white;
     height: 2.3rem;
     border-radius: 10px;
@@ -564,8 +566,7 @@ e{
     font-size: large;
   }
 
-  #divPesquisa{
-    display: flex;
+  #pesquisa{
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.671);
     width: 100%;

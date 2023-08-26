@@ -10,7 +10,7 @@
     },
     {
       "checkboxId": "mostrarPesquisa",
-      "elementId": "divPesquisa",
+      "elementId": "pesquisa",
       "iconClass": "mostrarPesquisa",
       "labelClass": "mostrarPesquisa",
       "showClass": "escondido",
