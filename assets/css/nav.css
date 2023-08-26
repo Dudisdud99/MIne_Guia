@@ -181,8 +181,7 @@
     background:  red;
     transition: 0.5s;
   }
-
-  .icone{
+e{
     width: 1.3rem;
     height: 1.3rem;
   }
@@ -465,7 +464,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
     margin-left: 0.5rem;
@@ -493,8 +493,7 @@
     background:  red;
     transition: 0.5s;
   }
-
-  .icone{
+e{
     width: 1.3rem;
     height: 1.3rem;
   }
@@ -531,10 +530,11 @@
     background-color: white;
     width: 2.3rem;
     height: 2.3rem;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
     margin-top: 0%;
@@ -561,9 +561,20 @@
     border: none;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
     font-size: large;
+  }
+
+  #divPesquisa{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.671);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    margin-top: 5rem;
+    padding: 1rem;
+    height: 35rem;
+    z-index: 6;
   }
 
   #mostrarUsuario{
@@ -576,10 +587,9 @@
     background-color: white;
     width: 2.3rem;
     height: 2.3rem;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     cursor: pointer;
     transition: 0.2s;
     margin-top: 0%;

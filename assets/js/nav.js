@@ -1,4 +1,4 @@
-// Função para carregar elementos a partir do JSON
+
 async function loadElementsFromJson() {
   try {
     const response = await fetch('assets/json/nav.json');
