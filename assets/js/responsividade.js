@@ -1,7 +1,7 @@
-const viewportWidth = window.innerWidth
-const viewportHeight = window.innerHeight
+const screenWidth = window.screen.width;
+const screenHeight = window.screen.height;
 const fundo = document.querySelector('.fundo')
 
-if(viewportWidth<768){
+if(screenWidth<768){
     fundo.src = "assets/img/mobsCelular.jpg"
 }
