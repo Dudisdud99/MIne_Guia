@@ -34,14 +34,20 @@ body{
     display: flex;
     background-color: rgba(0, 0, 0, 0.692);
     border-radius: 10px;
+    width: 100%;
 }
 
 .alternativas{
     display: grid;
-    grid-template-columns: repeat(10,1fr);
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 1fr 1fr;
+    /*display: flex;
+    flex-wrap: wrap;*/
     justify-content: center;
     text-align: center;
     gap: 1rem;
+    width: 80%;
+
 }
 
 .alternativas button{
@@ -208,4 +214,221 @@ body{
     display: flex;
     justify-content: center;
     gap: 5rem;
+}
+
+.divAlternativas{
+    display: flex;
+    justify-content: center; 
+}
+
+
+
+@media (max-width: 768px) {
+    body{
+        margin: 0%;
+        background-color: black;
+    }
+    
+    .conteudo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .quiz{
+        z-index: 5;
+        position: absolute;
+        transform: translate(0,10rem);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+    }
+    
+    .quiz div{
+        padding: 1rem; 
+    }
+    
+    .divPergunta{
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        display: flex;
+        background-color: rgba(0, 0, 0, 0.692);
+        border-radius: 10px;
+    }
+    
+    .alternativas{
+        display: grid;
+        grid-template-columns: repeat(10,1fr);
+        justify-content: center;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .alternativas button{
+        background-color: white;
+        border-radius: 10px;
+        color: red;
+        font-size: x-large;
+        border: none;
+        transition: 0.2s;
+        height: 5rem;
+    }
+    .alternativas button:hover{
+        transform: scale(120%);
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    .alternativas button:active{
+        transform: scale(100%);
+        background-color: red;
+        color: white;
+        transition: 0.2s;
+    }
+    
+    .totalErros,.totalAcertos{
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.733);
+        border-radius: 10px;
+        height: 5rem;
+        padding: 0.3rem;
+    }
+    
+    .titulo{
+        background-color: rgba(0, 0, 0, 0.747);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+    
+    .escondido{
+        display: none;
+    }
+    
+    .quiz div>h1{
+        margin-right: 0.5rem;
+    }
+    
+    .final{
+        background-color: blue;
+    }
+    
+    .modal{
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.459);
+        display: grid;
+        place-items: center;
+        transition: 0.2s;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 5;
+    }
+    
+    .modal.opened,
+    .final.opened{
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .modal .window{
+        width: 20vw;
+        height: 20vh;
+        background-color: white;
+        border-radius: 1vw;
+        padding: 1rem;
+        display: grid;
+        place-items: center;
+        text-align: center;
+        background-color: white;
+        font-size: 3rem;
+    }
+    
+    .acertou,
+    .errou{
+        opacity: 0;
+        visibility: hidden;
+        color: black;
+        display: none;
+        font-size: 3rem;
+    }
+    
+    .modal.modalAcertou{
+        background-color: green;
+    }
+    .modal.modalErrou{
+        background-color: rgb(255, 0, 0);
+    }
+    
+    .acertou.opened,
+    .errou.opened{
+        opacity: 1;
+        visibility: visible;
+        display: block;
+    }
+    
+    .final>div{
+        width: 50vw;
+        height: 50vh;
+        background-color: white;
+        border-radius: 10px;
+        padding: 1rem;
+        position: relative;
+    }
+    
+    .final{
+        position: fixed;
+        z-index: 6;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.445);
+        display: grid;
+        place-items: center;
+        transition: 0.2s;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    .paraCima{
+        display: none;
+    }
+    
+    .finalTexto{
+        text-align: center;
+        font-size: 2rem;
+        background-color: blueviolet;
+        padding: 0.5rem;
+        color: white;
+        border-radius: 5px;
+    }
+    
+    .reiniciar{
+        background-color: red;
+        border-radius: 10px;
+        right: 1rem;
+        padding: 0.8rem;
+        color: white;
+        border: none;
+        font-size: large;
+        position: absolute;
+        bottom: 1rem;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    
+    .reiniciar:hover{
+        transform: scale(110%);
+        transition: 0.2s;
+    }
+    
+    .reiniciar:active{
+        transform: scale(90%);
+        transition: 0.2s;
+    }
+    
+    .placar{
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+    }
 }
