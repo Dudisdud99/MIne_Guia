@@ -40,7 +40,7 @@
     margin-right: 0.25rem; 
     margin-bottom: 3rem;
     height: 23rem;
-    background: rgba(255, 255, 255, 0.151);
+    background: rgba(255, 255, 255, 0.247);
     padding: 0.5rem;
     
   }
@@ -127,13 +127,7 @@
     font-family:Arial, Helvetica, sans-serif;
     position: absolute;
     z-index: 3;
-    width: 97.5vw;
-  }
-
-  div#conteudo>p{
-    margin-left: 1rem;
-    color: white;
-    font-size: 2rem;
+    width: 100%;
   }
 
   div.tipo-monstros>h2{
@@ -141,25 +135,36 @@
     margin-right: 1rem;
   }
 
-  div.lista{
+  .lista{
     display: flex;
     overflow-x:scroll;
     overflow-y: hidden;
     white-space: nowrap;
-    margin-left: 1rem;
-    margin-right: 0.25rem; 
-    margin-bottom: 3rem;
-    height: 23rem;
-    background: rgba(255, 255, 255, 0.151);
-    padding: 0.5rem;
-    
+    height: 25rem;
+    background: rgba(255, 255, 255, 0.247);
+    padding: 1rem;
+    width: 90%;
+    margin: 0%;
+  }
+
+  .divLista{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .divLista>h1{
+    color: white;
+    left: 0;
+    font-size: 2rem;
   }
 
   div.lista-mini{
     background: rgba(0, 0, 0, 0.76);
-    height: 15rem ;
+    height: 18rem;
     border: 2px solid black;
-    margin-right: 1.5rem;
+    width: 100%;
   }
 
   div.lista-mini>.criaturas img{
@@ -168,7 +173,7 @@
   }
 
   div.lista-mini>.criaturas{
-    height: 10rem;
+    height: 13rem;
     margin-bottom: 1rem;
   }
 
@@ -177,13 +182,14 @@
     padding: 1rem;
     margin-top: 6rem;
     width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
   }
 
   div.tipo-monstros>p{
     padding: 1rem;
     background-color: rgb(155, 159, 168);
-    margin-left: 1rem;
-    margin-right: 1.5rem;
   }
 
   .criaturas{
