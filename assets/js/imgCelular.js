@@ -15,5 +15,8 @@ if(screenWidth<768){
     if (window.location.pathname.includes("monstros.html")) {
         fundo.src = "assets/img/mobsCelular.jpg"
     }    
+    if (window.location.pathname.includes("quiz.html")) {
+        fundo.src = "assets/img/quizCelular.jpg"
+    }    
 }
 
