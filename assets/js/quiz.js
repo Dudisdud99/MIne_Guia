@@ -108,4 +108,4 @@ async function iniciarJogo() {
 
 document.addEventListener('DOMContentLoaded', iniciarJogo);
 
-reiniciar.addEventListener('click', iniciarJogo);
+window.onload = iniciarJogo;
