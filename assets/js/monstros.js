@@ -62,3 +62,5 @@ async function carregarBt() {
 }
 
 carregarBt();
+
+window.onload = carregarBt();

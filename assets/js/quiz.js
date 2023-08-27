@@ -49,27 +49,24 @@ function mensagemErrou(){
 }
 
 
-async function main() {
+async function iniciarJogo() {
   const request = await fetch('assets/json/quiz.json');
-  const quiz = await request.json()
+  const quiz = await request.json();
 
-  contErros = 0
-  contAcertos = 0
-  numeroDaPergunta = 0
+  contErros = 0;
+  contAcertos = 0;
+  numeroDaPergunta = 0;
 
-  totalErros.textContent = contErros
-  totalAcertos.textContent = contAcertos
+  totalErros.textContent = contErros;
+  totalAcertos.textContent = contAcertos;
 
   function carregarPergunta(nPergunta) {
-    if (numeroDaPergunta > quiz.length){
-      return
+    if (numeroDaPergunta >= quiz.length) {
+      return;
     }
-    pergunta.innerHTML = quiz[nPergunta].pergunta
-    alternativas.innerHTML = ""
-    // for (let i = 0; i < 9; i++) {
-    //   elRespostas.innerHTML += `<button>${quiz[nPergunta].alternativas[i]}</button>`
-    // }
-    quiz[nPergunta].alternativas.forEach(alt => alternativas.innerHTML += `<button>${alt}</button>`)
+    pergunta.innerHTML = quiz[nPergunta].pergunta;
+    alternativas.innerHTML = "";
+    quiz[nPergunta].alternativas.forEach(alt => alternativas.innerHTML += `<button>${alt}</button>`);
   }
 
   alternativas.addEventListener("click", ev => {
@@ -109,4 +106,6 @@ async function main() {
 }
 
 
-main()
+document.addEventListener('DOMContentLoaded', iniciarJogo);
+
+reiniciar.addEventListener('click', iniciarJogo);
